@@ -1,0 +1,52 @@
+
+		ul li{
+			list-style: none;
+			display: inline-block;
+			color: #fff;
+			margin-right:12px; 
+
+		}
+		header{
+			text-align: center;
+			width: 90%;
+			height: 80px;
+			background: yellow;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		nav{
+			text-align: center;
+			width: 90%;
+			height: 100px;
+			background: green;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		section{
+			text-align: center;
+			width: 90%;
+			height: 550px;
+			background: gray;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		article{
+			float: left;
+			width: 60%;
+			height: 550px;
+		}
+		aside{
+			float: left;
+			width: 30%;
+			background: #ccc;
+			height: 550px;
+		}
+		
+		footer{
+			text-align: center;
+			width: 90%;
+			height: 70px;
+			background: blue;
+			margin-right: auto;
+			margin-left: auto;
+		}
