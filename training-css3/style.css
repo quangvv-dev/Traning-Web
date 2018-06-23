@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body {
+    width: 960px;
+    margin: 0 auto;
+    font-family: Helvetica, Arial,sans-serif;
+    font-size: 11px;
+}
+#header{
+    background-color: beige;
+    height: 85px;
+}
+#logo{
+    float: left;
+    width: 100px;
+    padding: 10px 0 0 77px;
+}
+.lienhecha{
+    float: right;
+    width: 500px;
+    height: 32px;
+
+}
+.lienhe{
+    float: left;
+    width: 140px;
+    padding-top: 14px;
+    margin-left: 5px;
+}
