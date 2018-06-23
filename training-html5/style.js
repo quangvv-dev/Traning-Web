@@ -1,6 +1,11 @@
 
-			var c = document.getElementById("myCanvas");
-			var ctx = c.getContext("2d");
-			ctx.beginPath();
-			ctx.arc(95,50,40,0,2*Math.PI);
-			ctx.stroke();
+		window.onload = function(){
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+ 
+    context.moveTo(50, 180); //Điểm bắt đầu
+    context.lineTo(570, 50); //Điểm kết thúc
+    context.strokeStyle = "#990000"; //Màu của đường thẳng
+    context.stroke();
+};
+
