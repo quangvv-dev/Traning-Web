@@ -94,7 +94,7 @@ button{
 .gradient1{
     /*background: violet;*/
 
-    background: linear-gradient(red, yellow,tomato,green);
+    background: linear-gradient(-45deg,red, yellow,tomato,green);
 }
 
 .gradient2{
