@@ -23,7 +23,7 @@ nav{
 }
 section{
     width: auto;
-    height: 500px;
+    height: 1000px;
 
 }
 article
@@ -31,15 +31,15 @@ article
     float: left;
     width: 60%;
     border: 1px solid red;
-    height: 500px;
+    height: 100%;
     background-color: whitesmoke;
     margin:5px 0 5px 15px;
 }
 aside{
    float: left;
     width: 37%;
-    border: 1px solid red;
-    height: 500px;
+
+    height: 100%;
     margin:5px 15px 5px  3px;
 
 }
@@ -65,6 +65,7 @@ button{
     margin: 15px;
     -webkit-border-image: url(images/photo2.jpg) 50 repeat; /* Safari 3.1-5 */
     -o-border-image: url(images/photo2.jpg) 50 repeat; /* Opera 11-12.1 */
+    -moz-border-image:url(images/photo2.jpg) 50 repeat;
     border-image: url(images/photo2.jpg) 50 repeat;
 
     position: relative;
@@ -94,14 +95,22 @@ button{
 .gradient1{
     /*background: violet;*/
 
-    background: linear-gradient(-45deg,red, yellow,tomato,green);
+    background: repeating-linear-gradient(red, yellow 10%,tomato 20%,green 30%);
 }
 
 .gradient2{
     /*background: violet;*/
     background: radial-gradient(black, white,purple,green);
 }
-
+.gradient3{
+    background-image: url(https://mdn.mozillademos.org/files/11305/firefox.png),
+    url(https://mdn.mozillademos.org/files/11307/bubbles.png),
+    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+    background-repeat: no-repeat;
+    background-position: bottom right, left;
+    background: -moz-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+    -webkit-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+}
 .shadow{
     float: left;
     margin: 20px 0 0 55px;
@@ -123,14 +132,11 @@ button{
 
 }
 
-@media screen and (min-width: 980px){
+@media screen and (max-width: 700px){
     header{
-        width: auto;
+        display:none;
     }
-    nav{width: auto}
 
-    article{width: 60%}
-    aside{width: 37%}
 
 }
 
@@ -155,8 +161,6 @@ ul{
     display: none;
 
 }
-
-
 
 .menu li{
     float: left;
@@ -185,3 +189,51 @@ ul li:hover{
 
 }
 
+
+/*Xử lý :Text efect*/
+
+.text-overflow
+{
+    float: left;
+
+    margin: 50px 0 0 20px;
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.word-wrap{
+    float: left;
+    margin: 50px 0 0 20px;
+    white-space: nowrap;
+    border: solid 1px;
+    width: 100px;
+    height: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.word-break{
+    float: left;
+    margin: 50px 0 0 20px;
+    width: 200px;
+    border: 1px solid red;
+    word-break: break-all;
+}
+
+
+/*xử lý phía giao diện người dùng*/
+.user-interface
+{
+    margin: 400px 0 0 50px;
+    border: 2px solid;
+    padding: 20px;
+    width: 500px;
+    resize: horizontal;
+    overflow: auto;
+
+    outline: 4px solid red;
+    outline-offset: 15px;
+
+}
