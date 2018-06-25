@@ -6,7 +6,7 @@
 <body>
 <!--demo figuare-->
 <figure>
-    <figcaption>My flower</figcaption>
+    <figcaption> My flower </figcaption>
     <p><img src="img_flower.jpg" alt="My flower" /></p>
 </figure>
 
