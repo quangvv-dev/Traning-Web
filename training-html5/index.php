@@ -11,8 +11,8 @@
 </figure>
 
 <article>
-<p>Tin trong ngày</p>
-<p>Công nghệ ngày càng tiến sâu vào đời sống chúng ta...</p>
+<p> Tin trong ngày</p>
+<p> Công nghệ ngày càng tiến sâu vào đời sống chúng ta...</p>
 </article>
 <!--demo Cavas-->
 <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
