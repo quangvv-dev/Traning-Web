@@ -44,7 +44,7 @@
 
 	
 	
-			<!-- Demo summary -->
+			<!-- Demo details -->
 			<details>
 			  <summary>Copyright 1999-2014.</summary>
 			  <p> - by Refsnes Data. All Rights Reserved.</p>
@@ -54,7 +54,8 @@
 			<!-- canvas: Được dùng để hiển thị đồ họa. -->
 			<canvas id="myCanvas" width="578" height="10"></canvas>
 				<!-- End canvas -->
-							<!-- Demo thẻ form -->
+
+			<!-- Demo thẻ form -->
 			<form action="#">
 				<h4>Demo Form</h4>
 				<label >Email</label>
@@ -70,9 +71,106 @@
 	</section>
 	<br>
 	<section>
-		
+		<article>
+			<!-- Tag <command> k chay javascript. -->
+			<menu>
+				<command onclick="alert(‘Đây là dòng thông báo’)" label="comLabel">Button</command>
+			</menu>
+
+			<!-- Định nghĩa một danh sách tùy chọn -->
+			Demo data list
+			<input list="html"/>
+			<datalist id="html">
+				<option value="Học HTML" ></option>
+				<option value="Tham khảo HTML"></option>
+				<option value="Ví dụ HTML"></option>
+				<option value="Thực hành HTML"></option>
+			</datalist>
+			<!--End Demo data list -->
+
+			<br><br>
+			<!-- Tag <embed /> xác định nội dung nhúng như một plugin. -->
+			<!-- Tag <embed /> thường được dùng để chèn flash. -->
+			Demo the embed
+			<embed src="http://hocwebchuan.com/common/swf/effect01.swf" />
+			
+			<!-- Demo the figure va figcaption -->
+			<!-- Xác định các nội dung liên quan mạch lạc với nhau, như hình ảnh, sơ đồ, code,... -->
+			<figure>
+				<!-- Xác định một chú thích cho tag figure. -->
+				<p><img src="http://hocwebchuan.com/reference/tag/example/images/img_flower.jpg" alt="My flower" width="400" /></p>
+				<figcaption>Chu thich</figcaption>
+			<figure>
+		</article>
+		<aside>
+			<!-- <hgroup>	Định nghĩa một nhóm các tiêu đề. -->
+			
+			<hgroup>
+				<h2>HTML5</h2>
+				<h3>Tag HTML5</h3>
+			</hgroup>
+
+			<!-- Xác định một cặp trường khóa chính sử dụng cho form. -->
+			<hr>
+			<form action="#" method="get">
+				<input type="text" name="searchKey" />
+				<keygen name="keygenName"  />
+				<input type="submit" />
+			</form>
+			</div>
+			
+			<!-- sử dụng khi muốn làm nổi bật văn bản của mình. -->
+			<hr>
+			<br>Demo thẻ mark
+			<p>Học <mark>HTML</mark> thật là dễ.</p> 
+			
+			<hr>
+			<div class="border">
+			Demo thẻ meter
+			<meter value="3" max="4" min="2">50%</meter><br><br>
+			</div>
+
+
+			<hr>
+			Demo thẻ output
+			<form action="" onsubmit="return false" oninput="result.value = num01.valueAsNumber + num02.valueAsNumber">
+				<input name="num01" type="number" /> + <input name="num02" type="number" /> = <output name="result" >
+				</output>
+			</form>
+			
+			<hr>
+			<!--thẻ rp hiển thị nội dung khi trình duyệt k hỗ trợ ruby -->
+			<!--thẻ rt Định nghĩa một lời giải thích -->
+			<!-- thẻ ruby Định nghĩa một chú thích ruby -->
+			<ruby>
+			hello world<rp>(</rp><rt>chào thế giới</rt><rp>)</rp>
+			</ruby>
+			
+		</aside>
 	</section>
-	<footer>
+	<br>
+	<section>
+		<article>
+			<!-- thẻ source dùng để xác định nguồn 1 media-->
+			Demo the source
+			<video controls="controls" poster="index.files/coutdown.jpg" width="400" height="240">
+				<source src="http://hocwebchuan.com/reference/tag/example/movie/coutdown.mp4" type="video/mp4">
+				<source src="http://hocwebchuan.com/reference/tag/example/movie/coutdown.ogv" type="video/ogg">
+				Trình duyệt của bạn không hỗ trợ thẻ video
+			</video>
+
+			<hr>
+			Demo thẻ time
+			<p>Thời gian làm việc từ <mark><time>08:00</time></mark> sáng các ngày trong tuần.</p>
+
+			<hr>
+			<p class="wrapBlock" style="width: 150px;border: 1px solid red;">Đoạn text có thể làm <wbr>vỡoooooooooooo</wbr> layout</p>
+		</article>
+		<aside>
+			
+		</aside>
+	</section>
+	<footer> 
 		<h1>
 			Đây là footer
 		</h1>
@@ -80,3 +178,4 @@
 	<script src="style.js"></script>
 </body>
 </html>
+

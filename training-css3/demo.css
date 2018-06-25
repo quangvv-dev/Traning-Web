@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: auto;
+    height: 80px;
+    background-color: violet;
+    color: white;
+    margin:0 15px 0 15px;
+    text-align: center;
+    padding-top: 25px;
+
+}
+
+nav{
+    width: auto;
+    height: 50px;
+    background-color: teal;
+    margin:5px 15px 0 15px;
+
+
+}
+section{
+    width: auto;
+    height: 1000px;
+
+}
+article
+{
+    float: left;
+    width: 60%;
+    border: 1px solid red;
+    height: 100%;
+    background-color: whitesmoke;
+    margin:5px 0 5px 15px;
+}
+aside{
+   float: left;
+    width: 37%;
+
+    height: 100%;
+    margin:5px 15px 5px  3px;
+
+}
+
+footer{
+    padding-top: 15px;
+    clear: left;
+    width: auto;
+    height: 100px;
+    background-color: rosybrown;
+    margin:0 15px 0 15px;
+    text-align: center;
+}
+button{
+    float: left;
+}
+
+
+.button1{
+    width: 100px;
+    height: 100px;
+    border: 15px solid transparent;
+    margin: 15px;
+    -webkit-border-image: url(images/photo2.jpg) 50 repeat; /* Safari 3.1-5 */
+    -o-border-image: url(images/photo2.jpg) 50 repeat; /* Opera 11-12.1 */
+    -moz-border-image:url(images/photo2.jpg) 50 repeat;
+    border-image: url(images/photo2.jpg) 50 repeat;
+
+    position: relative;
+    background-color: red;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 3s;
+}
+@-webkit-keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:100px;}
+    75%  {background-color:green; left:0px; top:100px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:100px;}
+    75%  {background-color:green; left:0px; top:100px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+.gradient1{
+    /*background: violet;*/
+
+    background: repeating-linear-gradient(red, yellow 10%,tomato 20%,green 30%);
+}
+
+.gradient2{
+    /*background: violet;*/
+    background: radial-gradient(black, white,purple,green);
+}
+.gradient3{
+    background-image: url(https://mdn.mozillademos.org/files/11305/firefox.png),
+    url(https://mdn.mozillademos.org/files/11307/bubbles.png),
+    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+    background-repeat: no-repeat;
+    background-position: bottom right, left;
+    background: -moz-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+    -webkit-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+}
+.shadow{
+    float: left;
+    margin: 20px 0 0 55px;
+    box-shadow: 10px 10px gray;
+}
+.text{
+    float: left;
+    padding-left: 45px;
+    font-size: 100px;
+    color: #58c0c7;
+    padding-top: 10px;
+    text-shadow: 4px 3px grey;
+}
+.vanban{
+    float: left;
+    padding: 15px 0 0 5px;
+    column-count: 3;
+    column-gap: 20px;
+
+}
+
+@media screen and (max-width: 700px){
+    header{
+        display:none;
+    }
+
+
+}
+
+.footer1{
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+ul{
+    list-style: none;
+    padding:5px 0 0 100px;
+
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu ul{
+    position: absolute;
+    display: none;
+
+}
+
+.menu li{
+    float: left;
+    width: 150px;
+    line-height: 1.5%;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.menu li:hover{
+    background: brown;
+    cursor: pointer;
+}
+
+
+ul li{
+
+
+    transition: width 4s;
+    -webkit-transition: width 4s;
+    -o-transition: width 1s;
+}
+ul li:hover{
+    width: 200px;
+
+}
+
+
+/*Xử lý :Text efect*/
+
+.text-overflow
+{
+    float: left;
+
+    margin: 50px 0 0 20px;
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.word-wrap{
+    float: left;
+    margin: 50px 0 0 20px;
+    white-space: nowrap;
+    border: solid 1px;
+    width: 100px;
+    height: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.word-break{
+    float: left;
+    margin: 50px 0 0 20px;
+    width: 200px;
+    border: 1px solid red;
+    word-break: break-all;
+}
+
+
+/*xử lý phía giao diện người dùng*/
+.user-interface
+{
+    margin: 400px 0 0 50px;
+    border: 2px solid;
+    padding: 20px;
+    width: 500px;
+    resize: horizontal;
+    overflow: auto;
+
+    outline: 4px solid red;
+    outline-offset: 15px;
+
+}
