@@ -27,6 +27,14 @@
 	    	Demo progress:
 			<progress value="22" max="100"></progress>
 			<br><p></p>
+
+			<hr>
+			<!-- Tag <meter> định nghĩa một phép đo. -->
+			<!-- Tag <meter> cho giá trị tối thiểu hoặc tối đa. -->
+			Demo thẻ meter
+			<meter value="3" max="4" min="2">50%</meter><br><br>
+
+			<hr>
 			<!-- Demo the audio -->
 			<audio src="http://hocwebchuan.com/reference/tag/example/audio/Doan-Xuan-Ca.ogg" controls="controls">Trình duyệt của bạn không hỗ trợ thành phần audio.<audio>
 
@@ -40,7 +48,7 @@
 
 			<!-- Demo canvas -->
 			<p>Demo Canvas</p>
-			<canvas id="myCanvas" width="300" height="150"></canvas>
+			<canvas id="myCanvas" width="300" height="150" style="border: 1px solid red"></canvas>
 
 	
 	
@@ -124,11 +132,6 @@
 			<br>Demo thẻ mark
 			<p>Học <mark>HTML</mark> thật là dễ.</p> 
 			
-			<hr>
-			<div class="border">
-			Demo thẻ meter
-			<meter value="3" max="4" min="2">50%</meter><br><br>
-			</div>
 
 
 			<hr>
@@ -142,7 +145,7 @@
 			<!--thẻ rp hiển thị nội dung khi trình duyệt k hỗ trợ ruby -->
 			<!--thẻ rt Định nghĩa một lời giải thích -->
 			<!-- thẻ ruby Định nghĩa một chú thích ruby -->
-			<ruby>
+			<ruby style="font-size: 40px">
 			hello world<rp>(</rp><rt>chào thế giới</rt><rp>)</rp>
 			</ruby>
 			
@@ -167,7 +170,31 @@
 			<p class="wrapBlock" style="width: 150px;border: 1px solid red;">Đoạn text có thể làm <wbr>vỡoooooooooooo</wbr> layout</p>
 		</article>
 		<aside>
-			
+			<p>Count numbers: <output id="result"></output></p>
+			<button onclick="startWorker()">Start Worker</button> 
+			<button onclick="stopWorker()">Stop Worker</button>
+
+			<script>
+				var w;
+
+				function startWorker() {
+					if(typeof(Worker) !== "undefined") {
+						if(typeof(w) == "undefined") {
+							w = new Worker("demo_workers.js");
+						}
+						w.onmessage = function(event) {
+							document.getElementById("result").innerHTML = event.data;
+						};
+					} else {
+						document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
+					}
+				}
+
+				function stopWorker() { 
+					w.terminate();
+					w = undefined;
+				}
+			</script>
 		</aside>
 	</section>
 	<footer> 
