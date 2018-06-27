@@ -109,45 +109,51 @@ footer .form .line-ft, footer .our-info .line-ft {
       float: left;
       padding-left: 60px;
       margin-top: 20px; }
-    .wrap-header header .content-header, .wrap-header header .content-header .contact {
-      width: 100%;
-      height: 50px; }
-      .wrap-header header .content-header .contact ul {
+    .wrap-header header .content-header {
+      width: 800px;
+      height: auto;
+      float: right;
+      margin-top: 22px; }
+      .wrap-header header .content-header .contact {
+        width: 100%;
+        height: auto;
+        padding-bottom: 5px; }
+        .wrap-header header .content-header .contact ul {
+          width: auto;
+          height: 20px;
+          float: right;
+          margin-top: 15px;
+          padding-right: 10px; }
+          .wrap-header header .content-header .contact ul li {
+            width: 190px;
+            height: 20px;
+            float: left;
+            margin-left: 20px;
+            text-align: right; }
+          .wrap-header header .content-header .contact ul a {
+            width: 90px;
+            height: 20px;
+            /*font-weight: bold;*/
+            color: #a9a9a9;
+            font-size: 10.3pt; }
+          .wrap-header header .content-header .contact ul span {
+            padding-right: 10px;
+            width: 10px;
+            height: 10px; }
+      .wrap-header header .content-header nav {
         width: auto;
-        height: 20px;
-        float: right;
-        margin-top: 15px;
-        padding-right: 10px; }
-        .wrap-header header .content-header .contact ul li {
-          width: 190px;
-          height: 20px;
-          float: left;
-          margin-left: 20px;
-          text-align: right; }
-        .wrap-header header .content-header .contact ul a {
-          width: 90px;
-          height: 20px;
-          /*font-weight: bold;*/
-          color: #a9a9a9;
-          font-size: 10.3pt; }
-        .wrap-header header .content-header .contact ul span {
-          padding-right: 10px;
-          width: 10px;
-          height: 10px; }
-      .wrap-header header .content-header nav, .wrap-header header .content-header .contact nav {
-        width: 550xp;
-        height: 20px;
+        height: 30px;
         float: right; }
-        .wrap-header header .content-header nav ul, .wrap-header header .content-header .contact nav ul {
+        .wrap-header header .content-header nav ul {
           width: 100%;
-          height: 20px; }
-          .wrap-header header .content-header nav ul li, .wrap-header header .content-header .contact nav ul li {
+          height: auto; }
+          .wrap-header header .content-header nav ul li {
             width: auto;
             float: left;
             height: 20px;
             text-align: center;
             padding: 5px 5px; }
-            .wrap-header header .content-header nav ul li a, .wrap-header header .content-header .contact nav ul li a {
+            .wrap-header header .content-header nav ul li a {
               width: auto;
               height: 20px;
               line-height: 20px;
