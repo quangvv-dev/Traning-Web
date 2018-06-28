@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="title" content="Tot cho seo"/>
-    <meta name="description" content="Seo Web tot nhat VN"/>
+    <meta name="description" content="Huong dan Seo web"/>
     <title>Laravel</title>
     <style>
         <?php
