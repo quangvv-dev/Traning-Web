@@ -4,25 +4,37 @@
 
 body {
   width: 960px;
-  background-color: black;
   margin: auto;
-  font-family: 'Roboto', Tahoma, Arial, sans-serif; }
+  background-color: black; }
 
+@font-face {
+  font-family: 'roboto-bold';
+  src: url("../roboto/Roboto-Bold.ttf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: roboto-light;
+  src: url("../roboto/Roboto-Light.ttf"); }
+@font-face {
+  font-family: roboto-medium;
+  src: url("../roboto/Roboto-Medium.ttf"); }
 section .section_slider {
   width: 100%;
   height: 298px;
   position: relative; }
   section .section_slider h1 {
     color: #ffffff;
-    font-size: 22px;
+    font-size: 22.86pt;
+    font-family: 'roboto-bold';
     position: absolute;
-    top: 180px;
-    right: 40px; }
+    top: 165px;
+    right: 50px; }
   section .section_slider p {
     color: #ffffff;
-    font-size: 13.86pt;
+    font-size: 17.86pt;
+    font-family: roboto-medium;
     position: absolute;
-    top: 220px;
+    top: 215px;
     right: 30px; }
   section .section_slider .fade {
     -webkit-animation-name: fade;
@@ -41,20 +53,24 @@ section .section_slider {
     opacity: 1; } }
 section .section_layer1 {
   float: left;
-  width: 345px;
-  height: 398px;
+  width: 300px;
+  height: 397px;
   background-color: #ffffff; }
   section .section_layer1 img {
-    margin: 100px 0 0 105px; }
+    margin: 103px 0 0 105px; }
   section .section_layer1 h3 {
     color: #706972;
+    font-size: 13.86pt;
     text-align: center;
-    margin-top: 12px; }
+    margin: 12px 0 0 70px;
+    font-family: roboto-bold; }
   section .section_layer1 p {
     color: #938e94;
     text-align: center;
-    padding-top: 10px;
-    font-size: 9pt; }
+    padding-top: 13px;
+    font-size: 10pt;
+    font-family: roboto-light;
+    margin-left: 50px; }
   section .section_layer1 button {
     width: 105px;
     height: 29px;
@@ -62,85 +78,97 @@ section .section_layer1 {
     margin: 19px 0 0 115px;
     border-radius: 8px;
     font-size: 11px;
+    font-family: roboto-light;
     color: #ffffff; }
 section .section_layer2 {
   float: left;
-  width: 245px;
-  height: 398px;
+  width: 337px;
+  height: 397px;
   background-color: #ffffff; }
   section .section_layer2 h2 {
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 29.3pt;
+    font-family: roboto-bold;
     color: #838383;
-    margin: 25px 0 0 26px; }
+    margin: 20px 0 0 50px; }
   section .section_layer2 h5 {
-    font-size: 10px;
+    font-size: 10pt;
+    font-family: roboto-bold;
     color: #888888;
-    margin-left: 25px; }
+    margin-left: 50px; }
   section .section_layer2 img {
-    margin: 35px 0 0 53px; }
+    margin: 25px 0 0 96px; }
   section .section_layer2 h3 {
     color: #706972;
     text-align: center;
-    margin-top: 10px; }
+    margin-top: 8px;
+    font-size: 13.86pt;
+    font-family: roboto-bold; }
   section .section_layer2 p {
     color: #938e94;
     text-align: center;
-    padding-top: 10px;
-    font-size: 9pt; }
+    padding-top: 14px;
+    font-family: roboto-light;
+    font-size: 10pt; }
   section .section_layer2 button {
     width: 105px;
     height: 29px;
     background-color: #00a2ed;
-    margin: 17px 0 0 78px;
+    margin: 17px 0 0 120px;
     border-radius: 8px;
     font-size: 11px;
+    font-family: roboto-light;
     color: #ffffff; }
   section .section_layer2 hr {
     margin-top: 27px;
     border: 1px solid #ededed; }
 section .section_layer3 {
   float: left;
-  width: 370px;
-  height: 398px;
+  width: 323px;
+  height: 397px;
   background-color: #ffffff; }
   section .section_layer3 img {
-    margin: 103px 0 0 105px; }
+    margin: 103px 0 0 55px; }
   section .section_layer3 h3 {
     color: #706972;
     text-align: center;
-    margin-top: 12px; }
+    margin: 14px 60px 0 0;
+    font-size: 13.86pt;
+    font-family: roboto-bold; }
   section .section_layer3 p {
     color: #938e94;
     text-align: center;
-    padding-top: 10px;
-    font-size: 9pt; }
+    padding-top: 14px;
+    font-size: 10pt;
+    font-family: roboto-light;
+    margin-right: 60px; }
   section .section_layer3 button {
     width: 105px;
     height: 29px;
     background-color: #00a2ed;
-    margin: 17px 0 0 130px;
+    margin: 17px 0 0 80px;
     border-radius: 8px;
     font-size: 11px;
+    font-family: roboto-light;
     color: #ffffff; }
 
 section .section_person {
   float: left;
   width: 100%;
-  height: 235px;
+  height: 238px;
   background-color: #ffffff; }
   section .section_person h2 {
-    font-size: 28px;
+    font-size: 29.3pt;
     text-align: center;
-    font-weight: bold;
+    font-family: roboto-bold;
     color: #888888;
-    margin-top: 10px; }
+    margin-top: 5px; }
   section .section_person h5 {
-    font-size: 10px;
+    font-size: 10pt;
+    font-family: roboto-bold;
     color: #888888;
     text-align: center; }
   section .section_person img {
-    margin: 52px 0 0 75px; }
+    margin: 35px 0 0 76px; }
   section .section_person hr {
     width: 245px;
     margin: 20px 0 0 345px;
@@ -149,68 +177,79 @@ section .section_person {
 section .section_atircle--cominication {
   float: left;
   width: 335px;
-  height: 374px;
+  height: 375px;
   background-color: #ffffff; }
   section .section_atircle--cominication img {
     margin: 91px 0 0 83px; }
   section .section_atircle--cominication h4 {
     margin: 11px 0 0 83px;
-    color: #626262; }
+    color: #626262;
+    font-size: 13.3pt;
+    font-family: roboto-bold; }
   section .section_atircle--cominication p {
-    font-size: 11px;
+    font-size: 8.3pt;
+    font-family: roboto-light;
     margin: 13px 0 0 83px;
     color: #817e7e; }
 section .section_atircle--computer {
   float: left;
   width: 288px;
-  height: 374px;
+  height: 375px;
   background-color: #ffffff; }
   section .section_atircle--computer h2 {
     clear: both;
-    font-size: 28px;
+    font-size: 29.3pt;
     text-align: center;
-    font-weight: bold;
+    font-family: roboto-bold;
     color: #888888;
-    margin-top: 10px; }
+    margin-top: 5px; }
   section .section_atircle--computer h5 {
-    font-size: 10px;
+    font-size: 10pt;
+    font-family: roboto-bold;
     color: #888888;
     text-align: center; }
   section .section_atircle--computer img {
-    margin: 38px 0 0 20px; }
+    margin: 28px 0 0 20px; }
   section .section_atircle--computer h4 {
     margin: 11px 0 0 20px;
-    color: #626262; }
+    color: #626262;
+    font-size: 13.3pt;
+    font-family: roboto-bold; }
   section .section_atircle--computer p {
-    font-size: 11px;
+    font-size: 8.3pt;
+    font-family: roboto-light;
     margin: 13px 0 0 20px;
     color: #817e7e; }
 section .section_atircle--IOT {
   float: left;
   width: 337px;
-  height: 374px;
+  height: 375px;
   background-color: #ffffff; }
   section .section_atircle--IOT img {
     margin-top: 91px; }
   section .section_atircle--IOT h4 {
     margin-top: 11px;
-    color: #626262; }
+    color: #626262;
+    font-size: 13.3pt;
+    font-family: roboto-bold; }
   section .section_atircle--IOT p {
-    font-size: 11px;
+    font-size: 8.3pt;
     margin-top: 13px;
-    color: #817e7e; }
+    color: #817e7e;
+    font-family: roboto-light; }
 
 footer {
-  height: 400px; }
+  clear: both;
+  height: 400px;
+  background-color: #323232; }
   footer .footer_vinsoft--about {
     float: left;
     width: 261px;
-    height: 100%;
-    background-color: #323232; }
+    height: 100%; }
     footer .footer_vinsoft--about h4 {
       margin: 42px 0 0 48px;
       color: #ffffff;
-      font-weight: bold; }
+      font-family: roboto-bold; }
     footer .footer_vinsoft--about hr {
       width: 189px;
       margin: 9px 0 0 46px;
@@ -219,12 +258,11 @@ footer {
       color: #cacaca;
       font-size: 9pt;
       margin: 16px 0 0 46px;
-      font-weight: bold; }
+      font-family: roboto-medium; }
   footer .footer_info--register {
     float: left;
     width: 275px;
-    height: 100%;
-    background-color: #323232; }
+    height: 100%; }
     footer .footer_info--register .section_arrow--down {
       clear: both;
       width: 0;
@@ -236,7 +274,7 @@ footer {
     footer .footer_info--register h4 {
       margin-top: 37px;
       color: #ffffff;
-      font-weight: bold; }
+      font-family: roboto-bold; }
     footer .footer_info--register hr {
       width: 273px;
       margin-top: 9px;
@@ -244,7 +282,7 @@ footer {
     footer .footer_info--register .name {
       margin-top: 10px;
       color: #60656b;
-      font-weight: bold; }
+      font-family: roboto-bold; }
     footer .footer_info--register .footer_info--text1 {
       width: 114px;
       height: 25px; }
@@ -255,13 +293,13 @@ footer {
       float: left;
       font-size: 11.86px;
       color: #60656b;
-      font-weight: bold; }
+      font-family: roboto-bold; }
     footer .footer_info--register .last_name {
       float: left;
       margin-left: 104px;
       font-size: 11.86px;
       color: #60656b;
-      font-weight: bold; }
+      ffont-family: roboto-bold; }
     footer .footer_info--register .footer_info--text3 {
       width: 270px;
       height: 25px; }
@@ -272,17 +310,18 @@ footer {
       width: 62px;
       height: 27px;
       background-color: #e5e5e7;
-      font-weight: bold;
+      font-family: roboto-bold;
       margin-top: 17px; }
+    footer .footer_info--register span {
+      color: red; }
   footer .footer_info--map {
     float: left;
     width: 424px;
-    height: 100%;
-    background-color: #323232; }
+    height: 100%; }
     footer .footer_info--map h4 {
       margin: 42px 0 0 69px;
       color: #ffffff;
-      font-weight: bold; }
+      font-family: roboto-bold; }
     footer .footer_info--map hr {
       width: 326px;
       margin: 9px 0 0 69px;
@@ -293,8 +332,20 @@ footer {
       margin: 10px 0 0 69px; }
     footer .footer_info--map p {
       font-size: 9pt;
-      font-weight: bold;
+      font-family: roboto-bold;
       color: #d4d4d4;
       margin: 12px 0 0 69px; }
+
+@media only screen and (min-width: 320px) and (max-width: 960px) {
+  body {
+    width: 100%; }
+
+  section {
+    width: 100%;
+    overflow: hidden; }
+
+  footer {
+    width: 100%;
+    overflow: hidden; } }
 
 /*# sourceMappingURL=style.css.map */
