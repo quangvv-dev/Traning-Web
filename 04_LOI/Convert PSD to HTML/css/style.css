@@ -51,7 +51,8 @@
     float: left;
     list-style: none;
     padding: 7px;
-    margin: 15px 15px; }
+    margin: 15px 15px;
+    text-align: left}
     .section_content_articles_content ul li h3 {
       text-transform: uppercase;
       font-size: 13.3pt;
@@ -61,8 +62,7 @@
     .section_content_articles_content ul li p {
       font-size: 9.86pt;
       color: #626262;
-      padding: 5px 0px;
-      text-align: left; }
+      padding: 5px 0px;}
 
 footer {
   background-color: #323232;
