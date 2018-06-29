@@ -56,5 +56,6 @@
                 </li>
             </ul>
         </div>
+        <div class="clearfix"></div>
     </div>
     <!--    END SECTION SERVICES--------------------------------------------->

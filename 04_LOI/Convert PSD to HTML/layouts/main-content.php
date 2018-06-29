@@ -50,6 +50,7 @@
                 </script>
             </ul>
         </div>
+        <div class="clearfix"></div>
         <!--      END SECTION ARTICLES--------------------------------- -->
     </div>
 </section>

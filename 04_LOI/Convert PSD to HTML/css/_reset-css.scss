@@ -29,9 +29,21 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+@font-face {
+  font-family: Roboto;
+  src: url("fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: medium;
+  src: url("fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: bold;
+  src: url("fonts/Roboto-Bold.ttf");
+}
 body {
   line-height: 1;
-  font-family: 'Roboto',Tahoma, Arial, sans-serif;
+  font-family:'Roboto', Serif;
 }
 ol, ul {
   list-style: none;

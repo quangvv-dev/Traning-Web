@@ -28,9 +28,18 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+@font-face {
+  font-family: Roboto;
+  src: url("fonts/Roboto-Regular.ttf"); }
+@font-face {
+  font-family: medium;
+  src: url("fonts/Roboto-Medium.ttf"); }
+@font-face {
+  font-family: bold;
+  src: url("fonts/Roboto-Bold.ttf"); }
 body {
   line-height: 1;
-  font-family: 'Roboto',Tahoma, Arial, sans-serif; }
+  font-family: 'Roboto', Serif; }
 
 ol, ul {
   list-style: none; }
@@ -60,37 +69,33 @@ table {
   height: auto; }
   .header_wrap_logo {
     width: 100px;
-    height: 85px;
+    height: 65px;
     margin: 10px 10px 10px 75px;
     float: left; }
   .header_wrap_contact {
     width: 560px;
     height: auto;
     float: right;
-    margin-top: 30px; }
+    margin-top: 20px; }
     .header_wrap_contact ul {
       width: 100%;
       height: auto; }
       .header_wrap_contact ul li {
-        width: 143px;
+        width: 140px;
         height: 30px;
         float: left;
         color: #a9a9a9;
         font-size: 9.86pt;
         line-height: 30px;
         padding-left: 27px; }
-        .header_wrap_contact ul li span {
-          width: 40px; }
-          .header_wrap_contact ul li span img {
-            width: 10px;
-            height: 10px;
-            padding-right: 5px; }
-          .header_wrap_contact ul li span .icon_social {
-            font-size: 9.86pt;
-            width: 30px;
-            height: 20px; }
+        .header_wrap_contact ul li span img {
+          padding-right: 5px; }
+        .header_wrap_contact ul li span .icon_social {
+          font-size: 9.86pt;
+          width: 30px;
+          height: 20px; }
       .header_wrap_contact ul #social_gmail {
-        width: 185px;
+        width: 190px;
         height: 30px; }
   .header_wrap_nav {
     width: auto;
@@ -144,86 +149,89 @@ table {
   .section_slider_info {
     position: absolute;
     z-index: 999;
-    right: 10px;
-    top: 180px; }
+    right: 20px;
+    top: 180px;
+    text-align: left; }
     .section_slider_info h1 {
-      width: 470px;
-      font-size: 18.86pt;
-      font-weight: bold;
+      width: 495px;
+      font-size: 20.86pt;
+      font-family: bold;
       color: #fff;
       float: right;
       padding-right: 15px; }
     .section_slider_info h2 {
-      width: 470px;
-      font-size: 14.86pt;
-      font-weight: bold;
+      width: 495px;
+      font-size: 16.86pt;
+      font-family: medium;
       color: #fff;
       float: right;
       padding-right: 10px;
-      margin-top: 10px; }
+      margin-top: 12px; }
 
 .section_content {
   margin: 10px auto;
   text-align: center; }
-  .section_content_services_title {
-    width: 300px;
-    height: auto;
-    margin: 20px auto;
-    text-align: center; }
-    .section_content_services_title h1 {
-      width: 100%;
-      height: 35px;
-      line-height: 35px;
-      font-size: 29.3pt;
-      color: #838383;
-      font-weight: bold; }
-    .section_content_services_title h2 {
-      font-size: 10pt;
-      font-weight: bold;
-      color: #838383; }
-  .section_content_services ul {
-    width: 100%;
-    height: auto; }
-    .section_content_services ul li {
+  .section_content_services {
+    margin-bottom: 25px; }
+    .section_content_services_title {
       width: 300px;
       height: auto;
-      float: left;
-      list-style: none;
-      padding: 10px;
-      margin-top: 5px; }
-      .section_content_services ul li .content_image {
-        width: 200px;
-        height: 150px;
-        margin: 10px auto;
-        background: url(images/moblie.gif) no-repeat center; }
-      .section_content_services ul li .content_image--wsdev {
-        width: 200px;
-        height: 150px;
-        margin: 10px auto;
-        background: url(images/moblie.gif) no-repeat center; }
-      .section_content_services ul li .content_image--IT {
-        width: 200px;
-        height: 150px;
-        margin: 10px auto;
-        background: url(images/moblie.gif) no-repeat center; }
-      .section_content_services ul li h3 {
-        font-size: 14pt;
-        padding: 5px;
+      margin: 20px auto;
+      text-align: center; }
+      .section_content_services_title h1 {
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        font-size: 29.3pt;
         color: #838383;
         font-weight: bold; }
-      .section_content_services ul li p {
-        font-size: 11pt;
-        padding: 5px;
-        color: #838383;
-        margin-bottom: 15px; }
-      .section_content_services ul li a {
+      .section_content_services_title h2 {
         font-size: 10pt;
-        padding: 8px;
-        color: #fff;
-        background-color: #00a2ed;
-        border-radius: 8px;
-        cursor: pointer;
-        outline: none;
-        text-decoration: none; }
+        font-weight: bold;
+        color: #838383; }
+    .section_content_services ul {
+      width: 100%;
+      height: auto; }
+      .section_content_services ul li {
+        width: 300px;
+        height: auto;
+        float: left;
+        list-style: none;
+        padding: 10px;
+        margin-top: 5px; }
+        .section_content_services ul li .content_image {
+          width: 200px;
+          height: 150px;
+          margin: 10px auto;
+          background: url(images/moblie.gif) no-repeat center; }
+        .section_content_services ul li .content_image--wsdev {
+          width: 200px;
+          height: 150px;
+          margin: 10px auto;
+          background: url(images/moblie.gif) no-repeat center; }
+        .section_content_services ul li .content_image--IT {
+          width: 200px;
+          height: 150px;
+          margin: 10px auto;
+          background: url(images/moblie.gif) no-repeat center; }
+        .section_content_services ul li h3 {
+          font-size: 14pt;
+          padding: 5px;
+          color: #838383;
+          font-weight: bold; }
+        .section_content_services ul li p {
+          font-size: 11pt;
+          padding: 5px;
+          color: #838383;
+          margin-bottom: 15px; }
+        .section_content_services ul li a {
+          font-size: 10pt;
+          padding: 8px;
+          color: #fff;
+          background-color: #00a2ed;
+          border-radius: 8px;
+          cursor: pointer;
+          outline: none;
+          text-decoration: none; }
 
 /*# sourceMappingURL=above.css.map */
