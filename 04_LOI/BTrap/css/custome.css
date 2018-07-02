@@ -13,10 +13,11 @@ header .logo{margin: 0px 60px;}
 
 header #menu{clear: both;float: right;text-align: center;}
 header #menu nav{width: 100%;height: auto;margin: 0px;padding: 0px;}
-header #menu nav ul{margin: 0px;padding: 0px;list-style: none;}
+header #menu nav ul{margin: 0px;padding: 0px;list-style: none;border: none;}
 header #menu nav ul li{padding: 0px 5px;display: inline-block;}
+header #menu nav ul li.active{background: #00a2ed;color: #fff;text-transform: capitalize;border-radius: 20px;text-decoration: none}
 header #menu nav ul li a{padding: 7px 12px;margin: 0px;font-weight: bold;font-size: 11.86px;color: #686868;}
-header #menu nav ul li:hover a{background: #00a2ed;color: #fff;text-transform: capitalize;border-radius: 20px;text-decoration: none}
+header #menu nav ul li.active a{color: #fff;text-transform: capitalize;border-radius: 20px;text-decoration: none}
 
 #menu .social-icon{padding: 0px;margin: 0px;}
 #menu .social-icon:hover a{background: transparent; color: #00a2ed;}
