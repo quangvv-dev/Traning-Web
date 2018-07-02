@@ -58,6 +58,8 @@ footer {
     padding-top: 35px; }
     footer .contact sup {
       color: red; }
+    footer .contact form {
+      margin-top: 25px; }
   footer .info {
     padding-top: 35px; }
   footer .about {
@@ -65,7 +67,8 @@ footer {
     footer .about .text {
       font-family: roboto-medium;
       color: #fff;
-      font-size: 13px; }
+      font-size: 13px;
+      margin-top: 25px; }
   footer input {
     width: 100%; }
   footer textarea {
