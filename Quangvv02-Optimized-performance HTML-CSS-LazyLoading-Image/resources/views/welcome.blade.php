@@ -30,8 +30,8 @@
             <div class="container-header-menu">
 
                 <div class="container-header-menu-info">
-                    <img src="image/icon_skype.png" alt="icon-skype"/>&nbsp;Skype:Vinsofts.com&emsp;
-                    <img src="image/icon_email.png" alt="icon-email" style="margin-top:-3px;"/>&nbsp;Mail:Contact@vinsofts.com&emsp;
+                    <img src="image/icon_skype.png" alt="icon-skype"/>&nbsp;Skype:Vinsofts.com&emsp;&emsp;
+                    <img src="image/icon_email.png" alt="icon-email" style="margin-top:-3px;"/>&nbsp;Mail:Contact@vinsofts.com&emsp;&emsp;
                     <img src="image/icon_phone.png" alt="icon-phone"/>&nbsp; Hotline:0988.988.988
                 </div>
 
@@ -218,7 +218,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/lazyload.min.js"></script>
-<script type="text/javascript">j;
+<script type="text/javascript">;
     new LazyLoad({
         elements_selector:["img","iframe"],
     });
