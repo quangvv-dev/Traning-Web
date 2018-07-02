@@ -42,7 +42,7 @@
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Gallery</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="#">ecruitment</a></li>
+                        <li><a href="#">Recruitment</a></li>
                     </ul>
                     <div class="container-header-menu-icon" >
                         <a href="http://www.facebook.com/"><img src="image/dssd_12.png" alt="Facebook" width="48" style="text-decoration: none; width: 30px;"></a>
@@ -185,7 +185,7 @@
         <footer >
             <div class="footer-line-down"></div>
             <div class="footer-about">
-                <h5>About  Vinsofts</h5>
+                <h5 style="color:#fff">ABOUT VINSOFT</h5>
                 <hr>
                 <p>Vinsofts Co., Ltd is software
                     innovation and outsourcing
@@ -196,7 +196,7 @@
                     EU countries.</p>
             </div>
             <div class="footer-form">
-                <h5>CONTACT US</h5>
+                <h5 style="color:#fff">CONTACT US</h5>
                 <hr>
                 <p>Name <sup>*</sup></p>
                 <input type="text"/>
@@ -204,10 +204,11 @@
                 <p>Email <sup>*</sup></p>
                 <input type="text"/>
                 <p>Commnent <sup>*</sup></p>
-                <textarea cols="3" rows="40" type="text"></textarea>
+                <textarea cols="3" rows="40" type="text"></textarea><br>
+                <input type="submit" value="Submit"/>
             </div>
             <div class="footer-map">
-                <h5 style="width: 55%;margin-left: 53%;">OURS INFO</h5>
+                <h5 style="width: 55%;margin-left: 53%;color: white">OURS INFO</h5>
                 <hr class="footer-map-line" >
                 <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.802368936622!2d105.78465515090815!3d21.040592292680472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab343be174b3%3A0x4b4d88def2a5bd8e!2zOCBQaGFuIFbEg24gVHLGsOG7nW5nLCBE4buLY2ggVuG7jW5nIEjhuq11LCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1529996049090" width="550" height="300" frameborder="0" style="border:0 ;margin-left: 50px" allowfullscreen></iframe>
             </div>
