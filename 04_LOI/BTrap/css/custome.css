@@ -1,0 +1,79 @@
+body{font-family: 'Roboto', sans-serif;margin: 0px;padding: 0px;border: 0px;}
+
+
+.wrapper-container{width: 100%;height: auto;margin:10px;padding: 0}
+.wrapper-container header{width: 960px;height: auto;margin: 0px auto}
+
+header #vinsofts-contact{float: right;text-align: right}
+header #vinsofts-contact ul{margin: 0px;padding: 0px;list-style: none}
+header #vinsofts-contact ul li{display: inline-block;padding: 5px 10px;text-align:center;}
+header #vinsofts-contact ul li a{color: #686868;font-size: 9.86px;font-weight:bold;text-decoration: none;font-family: 'Roboto', sans-serif}
+header #vinsofts-contact ul li span{padding: 0px 5px;}
+header .logo{margin: 0px 60px;}
+
+header #menu{clear: both;float: right;text-align: center;}
+header #menu nav{width: 100%;height: auto;margin: 0px;padding: 0px;}
+header #menu nav ul{margin: 0px;padding: 0px;list-style: none;}
+header #menu nav ul li{padding: 0px 5px;display: inline-block;}
+header #menu nav ul li a{padding: 7px 12px;margin: 0px;font-weight: bold;font-size: 11.86px;color: #686868;}
+header #menu nav ul li:hover a{background: #00a2ed;color: #fff;text-transform: capitalize;border-radius: 20px;text-decoration: none}
+
+#menu .social-icon{padding: 0px;margin: 0px;}
+#menu .social-icon:hover a{background: transparent; color: #00a2ed;}
+
+#visofts-slider{width: 960px;height: auto;margin: 10px auto;}
+#visofts-slider .slider-item{margin: 0px;padding: 0px;position: relative;transition: 2s}
+#visofts-slider .slider-info{float: right;position: absolute;top:180px;right: 10px;width: 430px;height: auto;text-align: left}
+#visofts-slider .slider-info h2{color: #fff;font-weight: bold;font-size: 22.86px}
+#visofts-slider .slider-info h3{color: #fff;font-weight:500;font-size: 17.86px}
+
+#services{ width: 960px;height: auto;margin: 0px auto;clear: both}
+#services h1{width: 100%;height: auto;text-align: center;color: #686868;font-weight: bold;font-size: 29.3px;margin:30px 0px 0px 0px;padding: 0px;}
+#services h2{width: 100%;height: auto;text-align: center;color: #686868;font-weight: bold;font-size: 10px;padding-bottom: 30px}
+#services ul{margin: 10px 0px;padding: 0px;}
+#services ul li{margin: 0px;padding: 0px;text-align: center;list-style: none;}
+#services h3{width: 100%;height: auto;text-align: center;color: #686868;font-weight: bold;font-size: 14.86px;padding-bottom: 10px}
+#services p{width: 100%;height: auto;text-align: center;color: #686868;font-weight: lighter;font-size: 11.86px;padding-bottom: 5px}
+#services .link-more{background: #00a2ed;font-size: 9.86px;text-align: center;text-decoration: none;color: #fff;padding: 10px 10px;border-radius: 5px;}
+
+.line{width: 300px;height: 1px;border-bottom: 1px #686868 solid;margin: 10px auto;}
+#line-ft{width: 200px;height: 1px;border-bottom: 1px #686868 solid;margin:10px 0px 10px 30px;}
+
+#clients{width: 960px;height: auto;margin: 0px auto;clear: both}
+#clients h1{width: 100%;height: auto;text-align: center;color: #686868;font-weight: bold;font-size: 29.3px;margin:30px 0px 0px 0px;padding: 0px;text-transform: uppercase;}
+#clients h2{width: 100%;height: auto;text-align: center;color: #686868;font-weight: bold;font-size: 10px;padding-bottom: 20px}
+#clients .row{margin: 0px auto;text-align: center}
+#clients .col-md-2{margin: 0px 10px;}
+#clients .person-image{padding: 10px 40px;}
+
+#article{width: 960px;height: auto;margin: 0px auto;clear: both}
+#article h1{width: 100%;height: auto;text-align: center;color: #686868;font-weight: bold;font-size: 29.3px;margin:30px 0px 0px 0px;padding: 0px;text-transform: uppercase;}
+#article h2{width: 100%;height: auto;text-align: center;color: #686868;font-weight: bold;font-size: 10px;padding-bottom: 20px}
+#article ul{margin: 10px 0px;padding: 0px;}
+#article ul li{margin: 0px;padding: 0px;text-align: center;list-style: none;}
+#article h3{width: 100%;height: auto;text-align: left;color: #686868;font-weight: bold;font-size: 13.86px;padding: 10px 22px;text-transform: uppercase;}
+#article p{width: 100%;height: auto;text-align: left;color: #686868;font-weight: lighter;font-size: 10.86px;padding: 0px 22px}
+
+footer{width: 960px;height: auto;margin: 0px auto;clear: both;background: #1d2124;}
+footer #footer-arrows{    width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-top: 10px solid #fff;margin: 0px auto;}
+footer h3{color: #fff;font-size: 14.86px;font-weight: bold;margin: 40px 0px 0px 0px}
+footer .footer-about{color: #fff;font-size: 14.86px;font-weight: bold;margin: 40px 0px 0px 0px;padding-left: 30px;}
+footer p.footer-about{color: #fff;font-size: 10.86px;font-weight: bold;margin: 10px 0px 0px 0px;padding-left: 30px;}
+footer .submit-form{margin: 0px;padding: 0px;}
+footer .submit-form p{color: #6b6968; padding: 0px;margin: 0px;font-weight: bold;font-size: 13.86px;}
+footer .submit-form span{color: red;}
+
+footer .submit-form #firts-name{width:auto;height:auto;margin: 0px;float: left}
+footer .submit-form #firts-name input{width: 110px;height: 30px}
+footer .submit-form #firts-name p{clear: both}
+
+footer .submit-form #last-name{width:auto;height:auto;margin: 0px;padding: 0px;float: right;padding-right: 20px;}
+footer .submit-form #last-name input{width: 150px;height: 30px;}
+footer .submit-form #last-name p{clear: both}
+
+footer .submit-form .form-input{width: 280px;height: 30px;}
+footer .submit-form .form-input-area{width: 280px;height: 60px;}
+footer .submit-form #submit{background: #e9e8e5;padding: 5px 10px;margin: 10px 0px 50px 0px;border: solid transparent;text-transform: capitalize;transition: 0.5s;font-weight: bold;}
+footer .submit-form #submit:hover{color: #fff;background: #000000;cursor: pointer;}
+
+footer p{color: #d4d4d4;padding: 10px 0px;font-size: 10.86px; font-weight: bold}
