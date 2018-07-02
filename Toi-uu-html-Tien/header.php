@@ -18,15 +18,20 @@
 					<!-- menu -->
 					<div class="row menu">
 						<div class="col-9 ">
-							<nav class="links">
-								<ul>
-									<li><a href="#">Home</a></li>
-									<li><a href="#">Protfolio</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="#">Gallery</a></li>
-									<li><a href="#">Contact</a></li>
-									<li><a href="#">Recruitment</a></li>
+							<nav class="links navbar navbar-expand-lg navbar-light" id="myDIV">
+									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+								<ul class="navbar-nav mr-auto">
+									<li class="nav-item"><a href="#" class="btn nav-link active">Home</a></li>
+									<li class="nav-item"><a href="#" class="btn nav-link">Protfolio</a></li>
+									<li class="nav-item"><a href="#" class="btn nav-link">Services</a></li>
+									<li class="nav-item"><a href="#" class="btn nav-link">Gallery</a></li>
+									<li class="nav-item"><a href="#" class="btn nav-link">Contact</a></li>
+									<li class="nav-item"><a href="#" class="btn nav-link">Recruitment</a></li>
 								</ul>
+							</div>
 							</nav>
 						</div>
 						<div class="col-3">
@@ -47,3 +52,15 @@
 			</div>
 		</header>
 		<!-- end-header -->
+		<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>

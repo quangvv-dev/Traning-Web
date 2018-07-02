@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 	<?php
-	$css = file_get_contents('css/header.min.css');
+	$css = file_get_contents('css/header.css');
 	echo $css;
 	?>
 </style>
@@ -138,7 +138,7 @@
 		<?php include "footer.php" ?>
 	</div>
 	<script src="js/lazyload.min.js"></script>
-	<script>
+	<script >
 		new LazyLoad({
 			elements_selector: ["img", "iframe"]
 		});
