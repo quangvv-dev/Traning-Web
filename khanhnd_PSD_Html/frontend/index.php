@@ -74,11 +74,11 @@
         <div class="section_person">
                 <h2>OUR CLIENTS</h2>
                 <h5>The Circle Of Live And Deft Continute</h5>
-                <img class="lazy"  data-src="../images/per1.gif" alt="person 1">
-                <img class="lazy"  data-src="../images/per2.gif" alt="person 2">
-                <img class="lazy"  data-src="../images/per3.gif" alt="person 3">
-                <img class="lazy"  data-src="../images/per4.gif" alt="person 4">
-                <img class="lazy"  data-src="../images/per5.gif" alt="person 5">
+                <img class="lazy"  data-src="../frontend/images/per1.gif" alt="person 1">
+                <img class="lazy"  data-src="../frontend/images/per2.gif" alt="person 2">
+                <img class="lazy"  data-src="../frontend/images/per3.gif" alt="person 3">
+                <img class="lazy"  data-src="../frontend/images/per4.gif" alt="person 4">
+                <img class="lazy"  data-src="../frontend/images/per5.gif" alt="person 5">
                  <hr>
         </div>
 
@@ -92,7 +92,7 @@
 
         <div class="arrow-down"></div>
         <div class="section_atircle--cominication">
-            <img class="lazy" data-src="../images/img1.gif" alt="person communication">
+            <img class="lazy" data-src="../frontend/images/img1.gif" alt="person communication">
             <h4>VESTIBULUM IPSUMS EROS</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing <br>elit,sed do eiusmod tempor incididunt ut labore et
                 <br>dolore magna aliqua. Ut enim ad minim veniam ....</p>
@@ -101,14 +101,14 @@
         <div class="section_atircle--computer">
             <h2>OUR ARTICLES</h2>
             <h5>We Like To Keep Evwryone Updated</h5>
-            <img class="lazy" data-src="../images/img2.gif" alt="connect computer">
+            <img class="lazy" data-src="../frontend/images/img2.gif" alt="connect computer">
             <h4>VESTIBULUM IPSUMS EROS</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing <br>elit,sed do eiusmod tempor incididunt ut labore et
                 <br>dolore magna aliqua. Ut enim ad minim veniam ....</p>
         </div>
 
         <div class="section_atircle--IOT">
-            <img class="lazy" data-src="../images/img3.png" alt="connect IOT">
+            <img class="lazy" data-src="../frontend/images/img3.png" alt="connect IOT">
             <h4>VESTIBULUM IPSUMS EROS</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing <br>elit,sed do eiusmod tempor incididunt ut labore et
                 <br>dolore magna aliqua. Ut enim ad minim veniam ....</p>
