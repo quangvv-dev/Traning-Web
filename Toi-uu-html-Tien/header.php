@@ -39,7 +39,6 @@
 					<!-- end-menu -->
 				</div>
 			</div>
-			<!-- end-logo menu -->
 			<div class="slide">
 				<div class="text">
 					<h3>WEB DESIGN COMPANY REPUPATION</h3>

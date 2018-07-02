@@ -45,6 +45,9 @@ header .menu .links {
       header .menu .links ul li a:hover {
         background: #00a2ed;
         color: #fff; }
+header .menu .col-3 {
+  position: relative;
+  top: -5px; }
 header .slide {
   width: 100%;
   height: 300px;

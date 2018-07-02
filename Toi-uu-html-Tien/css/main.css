@@ -59,7 +59,8 @@ footer {
     footer .contact sup {
       color: red; }
     footer .contact form {
-      margin-top: 25px; }
+      margin-top: 25px;
+      width: 85%; }
   footer .info {
     padding-top: 35px; }
   footer .about {
