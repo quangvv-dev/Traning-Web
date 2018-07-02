@@ -46,4 +46,9 @@ header {
       text-decoration: none;
       margin: 12px 0 0 5px; }
 
-/*# sourceMappingURL=header.css.map */
+@media only screen and (max-width: 500px) {
+  header {
+    width: 100%;
+    overflow: hidden; } }
+
+/*# sourceMappingURL=css.map */

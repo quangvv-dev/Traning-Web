@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thiết kế fie PSD</title>
     <meta name="description" content="tạo giao diện bằng xử lý cắt giao diện trên file PSD, điều đó khiến giao diện có độ chuẩn xác cao và đẹp mắt hơn.">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <style>
         <?php
-        $css = file_get_contents('../css/header.css');
+        $css = file_get_contents('../frontend/css/header.css');
         echo $css;
         ?>
     </style>
@@ -24,8 +24,8 @@
     <section>
 <!--        slider-->
         <div class="section_slider">
-            <img class="mySlides fade" src="../images/slider1.png" alt="slide 1">
-            <img class="mySlides fade" src="../images/slide2.png" alt="slide 2">
+            <img class="mySlides fade" src="images/slider1.png" alt="slide 1">
+            <img class="mySlides fade" src="images/slide2.png" alt="slide 2">
 
             <h1>WEB DESIGN COMPANY REPUPATION</h1>
             <p>we've been brougth the most valued products and <br>
@@ -36,7 +36,7 @@
 
 
         <div class="section_layer1">
-            <img src="../images/layer11.png" alt="layer1">
+            <img src="images/layer11.png" alt="layer1">
             <h3>Mobile App Development</h3>
             <p>We are experts in mobile development <br> industry for years. We have a team with 10 <br> skilled developers that have been in this
                 <br> field for at least 5 years so far.</p>
@@ -46,7 +46,7 @@
         <div class="section_layer2">
             <h2>OUR SERVICES</h2>
             <h5>We Get The Job Done, No Matter The Project</h5>
-            <img src="../images/layer12.png" alt="layer2">
+            <img src="images/layer12.png" alt="layer2">
             <h3>Website Devolopment</h3>
             <p>We provide website development services. <br> We are experts in below fields: <br> WordPress development
                 <br> Magento development</p>
@@ -56,7 +56,7 @@
 
 
         <div class="section_layer3">
-            <img src="../images/layer13.png" alt="layer3">
+            <img src="images/layer13.png" alt="layer3">
             <h3>Custom IT & Software Services</h3>
             <p>We provide other IT and software services <br> too.We have a team of experts in many fields <br>of software development,coding as well as IT
                 <br>related technologies.</p>
