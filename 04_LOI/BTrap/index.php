@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custome.css">
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="wrapper-container">
@@ -32,13 +33,13 @@
 
                 <div id="menu">
                     <nav>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Protflio</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Gallary</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Recruitment</a></li>
+                        <ul class="nav nav-tabs" >
+                            <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                            <li><a data-toggle="tab" href="#m1">Protflio</a></li>
+                            <li><a data-toggle="tab" href="#m2">Services</a></li>
+                            <li><a data-toggle="tab" href="#m3">Gallary</a></li>
+                            <li><a data-toggle="tab" href="#m4">Contact</a></li>
+                            <li><a data-toggle="tab" href="#m5">Recruitment</a></li>
                             <li class="social-icon"><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li class="social-icon"><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li class="social-icon"><a href="#"><i class="fa fa-instagram"></i></a></li>
