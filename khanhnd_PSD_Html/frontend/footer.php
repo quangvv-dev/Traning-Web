@@ -10,14 +10,14 @@
         <div class="section_arrow--down"></div>
         <h4>CONTACT US</h4>
         <hr>
-        <p class="name">Name<span>*</span></p>
+        <p class="name">Name &nbsp<span>*</span></p>
         <input type="text" class="footer_info--text1">
         <input type="text" class="footer_info--text2">
         <p class="first_name">First</p>
         <p class="last_name">Last</p> <br><br>
-        <p class="name">Email<span>*</span></p>
+        <p class="name">Email &nbsp<span>*</span></p>
         <input type="text" class="footer_info--text3">
-        <p class="name">Comment<span>*</span></p>
+        <p class="name">Comment &nbsp<span>*</span></p>
         <textarea></textarea>
         <button>Submit</button>
     </div>
