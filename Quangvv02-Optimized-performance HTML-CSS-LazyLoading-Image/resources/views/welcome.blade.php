@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="title" content="Tot cho seo"/>
-    <meta name="description" content="Huong dan Seo web"/>
+    <meta name="description" content="Seo Web tot nhat VN"/>
     <title>Laravel</title>
     <style>
         <?php
@@ -30,9 +30,9 @@
             <div class="container-header-menu">
 
                 <div class="container-header-menu-info">
-                    <i class="fa fa-skype" aria-hidden="true">Skype:Vinsofts.com</i>
-                    <i class="fa fa-envelope-o" aria-hidden="true">Mail:Contact@vinsofts.com</i>
-                    <i class="fa fa-phone" aria-hidden="true">Hotline:0988.988.988</i>
+                    <img src="image/icon_skype.png" alt="icon-skype"/>&nbsp;Skype:Vinsofts.com&emsp;
+                    <img src="image/icon_email.png" alt="icon-email" style="margin-top:-3px;"/>&nbsp;Mail:Contact@vinsofts.com&emsp;
+                    <img src="image/icon_phone.png" alt="icon-phone"/>&nbsp; Hotline:0988.988.988
                 </div>
 
                 <nav class="container-header-menu-navbar">
@@ -45,10 +45,10 @@
                         <li><a href="#">ecruitment</a></li>
                     </ul>
                     <div class="container-header-menu-icon" >
-                        <a href="http://www.facebook.com/"><img src="image/facebook.png" alt="Facebook" width="48" style="text-decoration: none; width: 30px;"></a>
-                        <a href="https://twitter.com/"><img src="image/twitter.png" alt="Twitter" width="48" style="text-decoration: none; width: 30px;"></a>
-                        <a href="https://plus.google.com/"><img src="image/google-plus.png" alt="Google Plus" width="48" style="text-decoration: none; width: 30px;"></a>
-                        <a href="http://convertkit.com"><img src="image/website.png" alt="Website" width="48" style="text-decoration: none; width: 30px;"></a>
+                        <a href="http://www.facebook.com/"><img src="image/dssd_12.png" alt="Facebook" width="48" style="text-decoration: none; width: 30px;"></a>
+                        <a href="https://twitter.com/"><img src="image/dssd_14.png" alt="Twitter" width="48" style="text-decoration: none; width: 30px;"></a>
+                        <a href="https://plus.google.com/"><img src="image/dssd_16.png" alt="Google Plus" width="48" style="text-decoration: none; width: 30px;"></a>
+                        <a href="http://convertkit.com"><img src="image/icon_gg.png" alt="Website" width="48" style="text-decoration: none; width: 30px;"></a>
                     </div>
 
                 </nav>
@@ -198,16 +198,16 @@
             <div class="footer-form">
                 <h5>CONTACT US</h5>
                 <hr>
-                <p>Name*</p>
+                <p>Name <sup>*</sup></p>
                 <input type="text"/>
                 <input type="text"/>
-                <p>Email*</p>
+                <p>Email <sup>*</sup></p>
                 <input type="text"/>
-                <p>Commnent*</p>
+                <p>Commnent <sup>*</sup></p>
                 <textarea cols="3" rows="40" type="text"></textarea>
             </div>
             <div class="footer-map">
-                <h5 style="width: 55%;margin-left: 66%;">OURS INFO</h5>
+                <h5 style="width: 55%;margin-left: 53%;">OURS INFO</h5>
                 <hr class="footer-map-line" >
                 <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.802368936622!2d105.78465515090815!3d21.040592292680472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab343be174b3%3A0x4b4d88def2a5bd8e!2zOCBQaGFuIFbEg24gVHLGsOG7nW5nLCBE4buLY2ggVuG7jW5nIEjhuq11LCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1529996049090" width="550" height="300" frameborder="0" style="border:0 ;margin-left: 50px" allowfullscreen></iframe>
             </div>

@@ -191,3 +191,9 @@ textarea {  width: 363px;  height: 100px;  }
     margin-left: 216px;
 }
 
+.container-header-menu-navbar>ul>li:hover>a, .container-header-menu-navbar>ul>.current-item>a {
+    background: #00a2ed;
+    border-radius: 10px;
+    height: 35px;
+    line-height: 15px;
+}
