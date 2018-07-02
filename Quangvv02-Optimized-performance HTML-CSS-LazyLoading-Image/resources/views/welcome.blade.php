@@ -62,7 +62,7 @@
             <div class=" container-banner-line">
                 <h5 class="container-banner-text-image">WEB DESIGN COMPANY REPUPATION</h5>
                 <p>we've been brougth the most valued products and
-                    servecies to our global clients during last 10 year</p></div>
+                    servecies to our global clients during last 10 year.We are experts in mobile development in industry</p></div>
         </div>
         <div class="container-services">
         <div class="container-services-title">
@@ -218,7 +218,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/lazyload.min.js"></script>
-<script type="text/javascript">
+<script type="text/javascript">j;
     new LazyLoad({
         elements_selector:["img","iframe"],
     });
