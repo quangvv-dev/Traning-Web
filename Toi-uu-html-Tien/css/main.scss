@@ -36,4 +36,12 @@ footer{width:100%;height: 430px;background: #323232;
 	input{width: 100%}textarea{width: 100%}
 	label,.label{color: #69655b;margin-bottom: 0;font-size: 14px;}
 	.btn-default{color: #4d5865;}
+	@media screen and (max-width: 768px) {
+		    height: 600px;
+		.info{display: none;}
+		.about{padding:15px ;
+			.text{margin:0 ;}
+		}
+		.contact{padding-top: 10px}
+	}
 }

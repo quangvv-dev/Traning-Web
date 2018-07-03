@@ -80,5 +80,16 @@ footer {
     font-size: 14px; }
   footer .btn-default {
     color: #4d5865; }
+  @media screen and (max-width: 768px) {
+    footer {
+      height: 600px; }
+      footer .info {
+        display: none; }
+      footer .about {
+        padding: 15px; }
+        footer .about .text {
+          margin: 0; }
+      footer .contact {
+        padding-top: 10px; } }
 
 /*# sourceMappingURL=main.css.map */

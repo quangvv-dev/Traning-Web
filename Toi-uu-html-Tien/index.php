@@ -13,7 +13,7 @@
 	echo $css;
 	?>
 </style>
-<link rel="stylesheet" href="css/main.min.css">
+<link rel="stylesheet" href="css/main.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -33,7 +33,7 @@
 			</div>
 
 			<div class="row">
-				<div class="col-4">
+				<div class="col-md-4 ">
 					<div class="card" >
 						<img class="card-img-top" src="img/product.png" alt="Card image cap" width="168px" height="126px">
 						<div class="card-body text-center">
@@ -43,7 +43,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-md-4 ">
 					<div class="card" >
 						<img class="card-img-top" src="img/product.png" alt="Card image cap" width="168px" height="126px">
 						<div class="card-body text-center">
@@ -53,7 +53,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-md-4 ">
 					<div class="card" >
 						<img class="card-img-top" src="img/product.png" alt="Card image cap" width="168px" height="126px">
 						<div class="card-body text-center">
@@ -81,11 +81,11 @@
 				</div>
 			</div>
 			<div class="row text-center">
-				<div class="col-md"><img data-src="img/clients.png" alt="clients" width="98px" height="98px"></div>
-				<div class="col-md"><img data-src="img/clients.png" alt="clients" width="98px" height="98px"></div>
-				<div class="col-md"><img data-src="img/clients.png" alt="clients" width="98px" height="98px"></div>
-				<div class="col-md"><img data-src="img/clients.png" alt="clients" width="98px" height="98px"></div>
-				<div class="col-md"><img data-src="img/clients.png" alt="clients" width="98px" height="98px"></div>
+				<div class="col-md col-sm-6 col-xs-6"><img data-src="img/clients.png" alt="clients" width="98px" height="98px"></div>
+				<div class="col-md col-sm-6 col-xs-6"><img data-src="img/clients.png" alt="clients" width="98px" height="98px"></div>
+				<div class="col-md col-sm-6 col-xs-6"><img data-src="img/clients.png" alt="clients" width="98px" height="98px"></div>
+				<div class="col-md col-sm-6 col-xs-6"><img data-src="img/clients.png" alt="clients" width="98px" height="98px"></div>
+				<div class="col-md col-sm-6 col-xs-6"><img data-src="img/clients.png" alt="clients" width="98px" height="98px"></div>
 			</div>
 		</section>
 		<!-- end-section2 -->
@@ -103,7 +103,7 @@
 				</div>
 			</div>
 			<div class="row ">
-				<div class="col-4">
+				<div class="col-md-4">
 					<div class="card card2" >
 						<img class="card-img-top" data-src="img/articles.png" alt="Card image cap">
 						<div class="card-body">
@@ -112,7 +112,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-md-4">
 					<div class="card card2" >
 						<img class="card-img-top" data-src="img/articles.png" alt="Card image cap">
 
@@ -122,7 +122,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-md-4">
 					<div class="card card2" >
 						<img class="card-img-top" data-src="img/articles.png" alt="Card image cap">
 						<div class="card-body">
@@ -143,5 +143,6 @@
 			elements_selector: ["img", "iframe"]
 		});
 	</script>
+
 </body>
 </html>
