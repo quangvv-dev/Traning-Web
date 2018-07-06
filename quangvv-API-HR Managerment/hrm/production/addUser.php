@@ -361,7 +361,16 @@ include ("connect.php");
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">team_id <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" name="team" required="required" type="text">
+                                <select name="team" >
+                                    <?php
+                                    $team   =   "SELECT * FROM `teams`";
+                                    $query  =   mysqli_query($conn,$team);
+                                    while($row    =   mysqli_fetch_array($query))
+                                    {
+                                        ?>
+                                        <option   value="<?php echo $row['id'] ?>"><?php echo $row['id'] ?></option>
+
+                                    <?php } ?></select>
                             </div>
                         </div>
 
@@ -436,10 +445,12 @@ include ("connect.php");
                         $language=$_POST['language'];
                         $leaveday=$_POST['leaveday'];
                         $role=$_POST['role'];
+
                         $team=$_POST['team'];
+                      
                         $status=$_POST['status'];
 
-                        $sql = "INSERT INTO `user`( `name`, `email`, `email_personal`, `password`, `remember_token`, `image`, `gender`, `date_of_birth`, `identify_id`, `phone_number`, `current_address`, `permanent_addres`, `graduate_from`, `salary`,`bank_account_number`, `hobby`, `family_description`, `language_skills`, `leave_days`, `role_id`, `team_id`, `status`) VALUES ('$name','$email','$emailP','$pass','$token','$nameImg','$gender','$birth','$identify','$phone','$CA','$PA','$graduate','$salary','$bank','$hobby','$family','$language','$leaveday','$role','$team','$status')";
+                        $sql = "INSERT INTO `user`( `name`, `email`, `email_personal`, `password`, `remember_token`, `image`, `gender`, `date_of_birth`, `identify_id`, `phone_number`, `current_address`, `permanent_addres`, `graduate_from`, `salary`,`bank_account_number`, `hobby`, `family_description`, `language_skills`, `leave_days`, `role_id`, `team_id`, `status`) VALUES ('$name','$email','$emailP','$pass','$token','$nameImg','$gender','$birth','$identify','$phone','$CA','$PA','$graduate','$salary','$bank','$hobby','$family','$language','$leaveday','$role',$team,'$status')";
                         mysqli_query($conn,$sql);
 
                         $url = 'http://localhost/hrm/production/users.php';
@@ -493,3 +504,4 @@ include ("connect.php");
 
 </body>
 </html>
+

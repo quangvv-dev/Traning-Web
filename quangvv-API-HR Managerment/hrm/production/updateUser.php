@@ -370,7 +370,20 @@ include ("connect.php");
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Team_id
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" name="team" required="required" type="text" value="<?php echo $row['team_id'] ?>">
+                                <div class="form-group">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <select name="team" >
+                                            <?php
+                                            $team   =   "SELECT * FROM `teams`";
+                                            $query  =   mysqli_query($conn,$team);
+                                            while($row    =   mysqli_fetch_array($query))
+                                            {
+                                                ?>
+                                                <option   value="<?php echo $row['id'] ?>"><?php echo $row['id'] ?></option>
+
+                                            <?php } ?></select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -448,7 +461,7 @@ include ("connect.php");
                         $team=$_POST['team'];
                         $status=$_POST['status'];
                         
-                        $sql="UPDATE `user` SET `name`='$name',`email`='$email',`email_personal`='$emailP',`password`='$pass',`remember_token`='$token',`image`='$nameImg',`gender`='$gender',`date_of_birth`='$birth',`identify_id`='$identify',`phone_number`='$phone',`current_address`='$CA',`permanent_addres`='$PA',`graduate_from`='$graduate',`salary`='$salary',`bank_account_number`='$bank',`hobby`='$hobby',`family_description`='$family',`language_skills`='$language',`leave_days`='$leaveday',`role_id`='$role',`team_id`='$team',`status`='$status' WHERE `id`='$id'";
+                        $sql="UPDATE `user` SET `name`='$name',`email`='$email',`email_personal`='$emailP',`password`='$pass',`remember_token`='$token',`image`='$nameImg',`gender`='$gender',`date_of_birth`='$birth',`identify_id`='$identify',`phone_number`='$phone',`current_address`='$CA',`permanent_addres`='$PA',`graduate_from`='$graduate',`salary`='$salary',`bank_account_number`='$bank',`hobby`='$hobby',`family_description`='$family',`language_skills`='$language',`leave_days`='$leaveday',`role_id`='$role',`team_id`=$team,`status`='$status' WHERE `id`='$id'";
                         mysqli_query($conn,$sql);
 
                         $url = 'http://localhost/hrm/production/users.php';
@@ -503,3 +516,4 @@ include ("connect.php");
 
 </body>
 </html>
+
