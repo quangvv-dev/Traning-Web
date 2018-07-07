@@ -111,7 +111,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">John Doe
+                    <img src="images/nhanvien4.jpg" alt="">John Doe
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -246,11 +246,13 @@
                       <td><?php echo $row['id']; ?></td>
                       <td><?php echo $row['name']; ?></td>
                       <td><?php echo $row['desscription']; ?></td>
-                      <td><img src="images/<?php echo $row['logo']; ?>" alt="phongban" width="100px" height="80px"></td>
+                      <td><img src="../api/images/<?php echo $row['logo']; ?>" alt="phongban" width="100px" height="80px"></td>
+
                       <td><?php echo $row['leader_id']; ?></td>
+    
                       <td>
                         <a href="suaphongban.php?id=<?php echo $row['id']; ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                        <a href="http://localhost/qlns/api/api.php/xoa_phongban?id=<?php echo $row['id'] ?>"class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                        <a href="http://localhost/qlns/api/api.php/xoa_phongban?id=<?php echo $row['id'] ?>"class="btn btn-danger btn-xs" onclick="return confirmAction()"><i class="fa fa-trash-o"></i> Delete </a>
                       </td>
                     </tr>
                   <?php } ?>
@@ -394,6 +396,11 @@
 
 <!-- Custom Theme Scripts -->
 <script src="../build/js/custom.min.js"></script>
-
+<script LANGUAGE="JavaScript">
+      function confirmAction() {
+        return confirm("Ban co thuc su muon xoa?")
+      }
+ 
+</script> 
 </body>
 </html>

@@ -1,13 +1,4 @@
-<?php include 'dbconnect.php';
-if(isset($_POST['submit'])){
-	$name=$_POST['name'];
-	$mota=$_POST['mota'];
-	$logo = $_POST['logo'];
-	$leader_id = $_POST['leader_id'];
-	$sql = "INSERT INTO teams (name,desscription,logo,leader_id)VALUES('$name','$mota','$logo','$leader_id')";
-	mysqli_query($con,$sql);
-}
-?>
+<?php include 'dbconnect.php';?>
 
 <!DOCTYPE html>
 <html lang="vi">
@@ -67,7 +58,7 @@ if(isset($_POST['submit'])){
 								<div class="x_content">
 
 
-									<form class="form-horizontal form-label-left" novalidate action="http://localhost/qlns/api/api.php/sua_phongban?id=<?php echo $_GET['id'] ?>" method="POST">
+									<form class="form-horizontal form-label-left" novalidate action="http://localhost/qlns/api/api.php/sua_phongban?id=<?php echo $_GET['id'] ?>" method="POST" enctype="multipart/form-data">
 										<?php 
 										$id=$_GET['id'];
 										$sql="select * from teams where id='$id'";
@@ -75,7 +66,7 @@ if(isset($_POST['submit'])){
 										while ($row = mysqli_fetch_array($result)) {
 											?>
 
-
+											<div class="hidden"><input type="text" value="<?php echo $row['logo'] ?>" name="anh"></div>
 											<div class="item form-group">
 												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span class="required">*</span>
 												</label>
@@ -89,13 +80,14 @@ if(isset($_POST['submit'])){
 												<div class="col-md-6 col-sm-6 col-xs-12">
 													<input id="name" class="form-control col-md-7 col-xs-12" name="mota" type="text" required="required" value="<?php echo $row['desscription']; ?>">
 												</div>
-											</div>>
+											</div>
 											<div class="item form-group">
 												<label class="control-label col-md-3 col-sm-3 col-xs-12" >Logo <span class="required">*</span>
 												</label>
 												<div class="col-md-6 col-sm-6 col-xs-12">
 													<input id="name" class="form-control col-md-7 col-xs-12" name="logo" type="file" >
 												</div>
+
 											</div>
 										<?php } ?>
 										<div class="item form-group">
