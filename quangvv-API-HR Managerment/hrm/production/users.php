@@ -73,10 +73,8 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
                 <!-- /sidebar menu -->
-
                 <!-- /menu footer buttons -->
                 <div class="sidebar-footer hidden-small">
                     <a data-toggle="tooltip" data-placement="top" title="Settings">
@@ -95,7 +93,6 @@
                 <!-- /menu footer buttons -->
             </div>
         </div>
-
         <!-- top navigation -->
         <div class="top_nav">
             <div class="nav_menu">
@@ -103,7 +100,6 @@
                     <div class="nav toggle">
                         <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                     </div>
-
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -122,7 +118,6 @@
                                 <li><a href="login.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                             </ul>
                         </li>
-
                         <li role="presentation" class="dropdown">
                             <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-envelope-o"></i>
@@ -192,17 +187,15 @@
             </div>
         </div>
         <!-- /top navigation -->
-
         <!-- page content -->
         <div class="right_col" role="main">
             <!-- top tiles -->
-           
+
             <!-- nhan vien -->
             <div class="col-md-12 col-sm-12 col-xs-12" id="users">
                 <div class="x_panel">
                     <div class="x_title">
                         <h2>List User <small>View</small></h2>
-
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                             </li>
@@ -222,7 +215,6 @@
                     </div>
                     <button type="button" name="btn-add" class="btn btn-info"><a href="addUser.php">Add New</a></button>
                     <div class="x_content" >
-
                         <table id="datatable" class="table table-striped table-bordered">
                             <thead>
                             <tr>
@@ -252,8 +244,6 @@
                                 <th>Thao tac</th>
                             </tr>
                             </thead>
-
-
                             <?php
                             $sql='select * from user';
                             $result = mysqli_query($conn,$sql);
@@ -298,7 +288,6 @@
             <!-- end-nhanvien -->
         </div>
         <!-- /page content -->
-
         <!-- footer content -->
         <footer>
             <div class="pull-right">
@@ -309,7 +298,6 @@
         <!-- /footer content -->
     </div>
 </div>
-
 <!-- jQuery -->
 <script src="../vendors/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap -->
@@ -336,9 +324,7 @@
 <script src="../vendors/jszip/dist/jszip.min.js"></script>
 <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
 <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
-
 <!-- Custom Theme Scripts -->
 <script src="../build/js/custom.min.js"></script>
-
 </body>
 </html>

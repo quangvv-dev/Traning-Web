@@ -95,7 +95,9 @@ include ("connect.php");
                         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                     </a>
                 </div>
+                
                 <!-- /menu footer buttons -->
+                
             </div>
         </div>
 
@@ -194,10 +196,12 @@ include ("connect.php");
                 </nav>
             </div>
         </div>
+        
         <!-- /top navigation -->
 
         <!-- page content -->
         <div class="right_col" role="main" style="min-height: 1552px;">
+            
             <!--Form add data teams-->
             <div class="x_panel">
             <div class="x_title">
@@ -240,7 +244,7 @@ include ("connect.php");
                     <div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Logo </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="file" name="file" id="fileToUpload" >
+                            <input type="file" name="file" id="fileToUpload" required="required" >
                         </div>
                     </div>
 
@@ -258,10 +262,12 @@ include ("connect.php");
                             <button type="submit" name="submit" class="btn btn-success" >Submit</button>
                         </div>
                     </div>
+                    
+<!--                    php xử lý submit-->
+                    
                     <?php
                     if(isset($_POST['submit'])) {
-//                        upload anh
-                            var_dump($_FILES["file"]["name"]);
+//                      Xử lý  upload anh
                         if($_FILES["file"]["name"]!=NULL)
                         {
 
@@ -276,17 +282,22 @@ include ("connect.php");
                                 }
                                 else{
 
-                                    $path = "images/"; // file luu vào thu muc chua file upload
+
                                     $tmp_name = $_FILES['file']['tmp_name'];
                                     $nameImg = $_FILES['file']['name'];
                                     $type = $_FILES['file']['type'];
                                     $size = $_FILES['file']['size'];
+                                    $idIMG  =   "Team-".$nameImg;
+                                    $path = "./images/".$idIMG;
 // Upload file
-//                                    move_uploaded_file($tmp_name,$path.$name);
-//                                    echo "File uploaded! <br />";
-//                                    echo "Tên file : ".$nameImg."<br />";
-//                                    echo "Kieu file : ".$type."<br />";
-//                                    echo "foder luu tru : ".$path.$nameImg;
+                                    move_uploaded_file($tmp_name,$path);
+                                    $name = $_POST['txtName'];
+                                    $des = $_POST['txtDes'];
+                                    $leader = $_POST['txtLeader'];
+                                    $sql = "INSERT INTO `teams`( `name`, `description`, `logo`, `leader_id`) VALUES ( '$name','$des','$idIMG','$leader')";
+                                    mysqli_query($conn, $sql);
+
+
                                 }
                             }
                             else {
@@ -297,21 +308,19 @@ include ("connect.php");
                         {
                             echo "vui long chon file";
                         }
-//                        end upload
+// End Upload file
 
-                            $name = $_POST['txtName'];
-                            $des = $_POST['txtDes'];
-                            $leader = $_POST['txtLeader'];
-                            $sql = "INSERT INTO `teams`( `name`, `description`, `logo`, `leader_id`) VALUES ( '$name','$des','$nameImg','$leader')";
-                            mysqli_query($conn, $sql);
-                            $url = 'http://localhost/hrm/production';
-                            echo '<META HTTP-EQUIV=REFRESH CONTENT="1; ' . $url . '">';
+
+                        $url = 'http://localhost/hrm/production';
+                        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; ' . $url . '">';
 
                     }
 
                     ?>
-
+<!--End xử lý submit-->
+                    
                 </form>
+                
             </div>
         </div>
 

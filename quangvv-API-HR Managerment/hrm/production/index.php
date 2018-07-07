@@ -200,6 +200,7 @@ include ("connect.php");
         <div class="right_col" role="main" style="min-height: 1552px;">
             <!--Table display teams-->
             <div class="x_content">
+
                 <div class="x_title">
                     <h2>List Teams <small>view</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
@@ -213,7 +214,7 @@ include ("connect.php");
                     </ul>
                     <div class="clearfix"></div>
                 </div>
-                <div id="datatable-buttons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline" role="grid" aria-describedby="datatable-buttons_info" style="width: 1512px;">
+                <div  id="datatable-buttons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer table-responsive"><table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline" role="grid" aria-describedby="datatable-buttons_info" style="width: 1512px;">
                         <button type="button" name="btn-add" class="btn btn-info"><a href="addTeams.php">Add New</a></button>
                         <thead>
                         <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 261px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">ID</th><th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 384px;" aria-label="Position: activate to sort column ascending">Name</th><th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 193px;" aria-label="Office: activate to sort column ascending">Description</th><th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 105px;" aria-label="Age: activate to sort column ascending">Logo</th><th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 187px;" aria-label="Start date: activate to sort column ascending">Leader_id</th><th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 149px;" aria-label="Salary: activate to sort column ascending">Thao Tac</th></tr>
@@ -237,10 +238,8 @@ include ("connect.php");
                         <?php } ?></tbody>
                     </table>
                 </div></div>
+            <!-- End Table display teams-->
 
-            <!-- /page content -->
-
-            <!-- footer content -->
             <footer>
                 <div class="pull-right">
                     Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
@@ -277,7 +276,7 @@ include ("connect.php");
             <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
 
             <!-- Custom Theme Scripts -->
-            <script src="../build/js/custom.js"></script>
+            <script src="../build/js/custom.min.js"></script>
 
 </body>
 </html>

@@ -198,7 +198,7 @@ include ("connect.php");
 
         <!-- page content -->
         <div class="right_col" role="main" style="min-height: 1552px;">
-            <!--Form add data teams-->
+            <!--Form update data teams-->
             <div class="x_panel">
                 <div class="x_title">
                     <h2>Form Design <small>different form elements</small></h2>
@@ -221,8 +221,8 @@ include ("connect.php");
                 </div>
                 <div class="x_content">
                     <br />
+<!--                    xử lý lấy info teams-->
                             <?php
-                            include ('connect.php');
                             if(isset($_GET['id']))
                             {   $id =   $_GET['id'];
                                 $sql =   "SELECT * FROM `teams` where `id`=$id";
@@ -230,6 +230,7 @@ include ("connect.php");
                             while($row    =   mysqli_fetch_array($query))
                             {
                             ?>
+<!--                    end xử lý lấy info teams-->
                     <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="" enctype="multipart/form-data">
 
                         <div class="form-group">
@@ -258,6 +259,7 @@ include ("connect.php");
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input  type="text" name="txtLeader" id="first-name" required="required" class="form-control col-md-7 col-xs-12" value="<?php  echo $row["leader_id"]?>">
+                                <input id="birthday" class=" hidden" name="imgold" type="text" value="<?php  echo $row["logo"]?>">
                             </div>
                         </div>
                         <div class="ln_solid"></div>
@@ -267,61 +269,32 @@ include ("connect.php");
                                 <button type="submit" name="submit" class="btn btn-success">Submit</button>
                             </div>
                         </div>
-                        <?php
-
-                        if(isset($_POST['submit'])){
-//                            upload anh
-                        if($_FILES["file"]["name"]!=NULL)
-                        {
-
-                            if($_FILES["file"]["type"]=="image/jpeg"
-                                ||$_FILES["file"]["type"]=="image/png"
-                                ||$_FILES["file"]["type"]=="image/gif"
-                            )
-                            {
-                                if($_FILES["file"]["size"]>1048576)
-                                {
-                                    echo "file quá nang";
-                                }
-                                else{
-
-                                    $path = "images/"; // file luu vào thu muc chua file upload
-                                    $tmp_name = $_FILES['file']['tmp_name'];
-                                    $nameImg = $_FILES['file']['name'];
-                                    $type = $_FILES['file']['type'];
-                                    $size = $_FILES['file']['size'];
-// Upload file
-//                                    move_uploaded_file($tmp_name,$path.$name);
-//                                    echo "File uploaded! <br />";
-//                                    echo "Tên file : ".$nameImg."<br />";
-//                                    echo "Kieu file : ".$type."<br />";
-//                                    echo "foder luu tru : ".$path.$nameImg;
-                                }
-                            }
-                            else {
-                                echo "file duoc chon khong hop le";
-                            }
-                        }
-                        else
-                        {
-                            echo "vui long chon file";
-                        }
-//                        end upload
-                            $name   =   $_POST['txtName'];
-                            $des    =   $_POST['txtDes'];
-                            $leader =   $_POST['txtLeader'];
-                            $sql = " UPDATE `teams` SET  `name`='$name',`description`='$des',`logo`='$nameImg',`leader_id`=$leader WHERE `id`=$id";
-                            mysqli_query($conn,$sql);
-                            // PHP permanent URL redirection test
-                            $url = 'http://localhost/hrm/production';
-                            echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-//                            header('Location:'. http://localhost/hrm/production/index.php);
-                        }
-
-                        ?>
-                       <?php } ?>
-
+                        <?php } ?>
                     </form>
+                    <?php
+                    if(isset($_POST['submit'])){
+//                            upload anh
+                        $name   =   $_POST['txtName'];
+                        $des    =   $_POST['txtDes'];
+                        $leader =   $_POST['txtLeader'];
+                        $id =   $_GET['id'];
+                        $imgold =   $_POST['imgold'];
+                                // xu ly  upload
+                                $tmp_name = $_FILES['file']['tmp_name'];
+                                $nameImg = $_FILES['file']['name'];
+                                $type = $_FILES['file']['type'];
+                                $size = $_FILES['file']['size'];
+                                $path = "./images/".$imgold;
+                                move_uploaded_file($tmp_name,$path);
+//                        end xu ly upload
+                                $sql = " UPDATE `teams` SET  `name`='$name',`description`='$des',`logo`='$imgold',`leader_id`=$leader WHERE `id`=$id";
+                                mysqli_query($conn,$sql);
+                                // PHP permanent URL redirection test
+                                $url = 'http://localhost/hrm/production';
+                                echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+                    }
+                    //                        end upload
+                    ?>
                 </div>
             </div>
 

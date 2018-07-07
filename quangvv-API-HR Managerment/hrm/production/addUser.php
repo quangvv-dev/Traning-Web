@@ -219,19 +219,22 @@ include ("connect.php");
                     </ul>
                     <div class="clearfix"></div>
                 </div>
+
+<!--                form add data-->
+
                 <div class="x_content">
                     <br />
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post"  enctype="multipart/form-data">
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post"  enctype="multipart/form-data" action="">
 
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Name <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Name 
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input type="text" name="name" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">email <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">email
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input type="email" id="last-name" name="email" required="required" class="form-control col-md-7 col-xs-12">
@@ -245,24 +248,17 @@ include ("connect.php");
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Password <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Password 
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" name="password" required="required" type="password">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">remember_token <span class="required">*</span>
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="token" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">image <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="file" name="file" id="fileToUpload" >
+                                <input type="file" name="file" id="fileToUpload" required="required" >
                                 
                             </div>
                         </div>
@@ -276,21 +272,21 @@ include ("connect.php");
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">date_of_birth <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">date_of_birth 
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" name="birthday" required="required" type="date">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">identify_id <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">identify_id >
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input type="text" name="indentify" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">phone_number <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">phone_number 
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input type="number" id="last-name" name="phone" required="required" class="form-control col-md-7 col-xs-12">
@@ -389,16 +385,18 @@ include ("connect.php");
                             </div>
                         </div>
                     </form>
+
+<!--                    /end form add data-->
+
+<!--                    php xử lý submit-->
                     <?php
                     if(isset($_POST['submit'])){
-                        if($_FILES["file"]["name"]!=NULL)
-                        {
-
+//                        xu ly upload
                             if($_FILES["file"]["type"]=="image/jpeg"
                                 ||$_FILES["file"]["type"]=="image/png"
                                 ||$_FILES["file"]["type"]=="image/gif"
                             )
-                            {
+
                                 if($_FILES["file"]["size"]>1048576)
                                 {
                                     echo "file quá nang";
@@ -410,54 +408,47 @@ include ("connect.php");
                                     $nameImg = $_FILES['file']['name'];
                                     $type = $_FILES['file']['type'];
                                     $size = $_FILES['file']['size'];
-                                    // Upload file
-                                    //                                    move_uploaded_file($tmp_name,$path.$name);
-                                    //                                    echo "File uploaded! <br />";
-                                    //                                    echo "Tên file : ".$nameImg."<br />";
-                                    //                                    echo "Kieu file : ".$type."<br />";
-                                    //                                    echo "foder luu tru : ".$path.$nameImg;
+                                    $idIMG  =   "User-".$nameImg;
+                                    $path = "./images/".$idIMG;
+                                    move_uploaded_file($tmp_name,$path);
                                 }
-                            }
                             else {
-                                echo "file duoc chon khong hop le";
+                                    echo "file duoc chon khong hop le";
                             }
-                        }
-                        else
-                        {
-                            echo "vui long chon file";
-                        }
-                        $name=$_POST['name'];
-                        $email=$_POST['email'];
-                        $emailP=$_POST['emailP'];
-                        $pass=$_POST['password'];
-                        $token=$_POST['remember_token'];
-                        $gender=$_POST['gender'];
-                        $birth=$_POST['birthday'];
-                        $identify=$_POST['indentify'];
-                        $phone=$_POST['phone'];
-                        $CA=$_POST['Caddress'];
-                        $PA=$_POST['Paddress'];
-                        $graduate=$_POST['graduate'];
-                        $salary=$_POST['salary'];
-                        $bank=$_POST['banknumber'];
-                        $hobby=$_POST['hobby'];
-                        $family=$_POST['family'];
-                        $language=$_POST['language'];
-                        $leaveday=$_POST['leaveday'];
-                        $role=$_POST['role'];
-
-                        $team=$_POST['team'];
-                      
-                        $status=$_POST['status'];
-
-                        $sql = "INSERT INTO `user`( `name`, `email`, `email_personal`, `password`, `remember_token`, `image`, `gender`, `date_of_birth`, `identify_id`, `phone_number`, `current_address`, `permanent_addres`, `graduate_from`, `salary`,`bank_account_number`, `hobby`, `family_description`, `language_skills`, `leave_days`, `role_id`, `team_id`, `status`) VALUES ('$name','$email','$emailP','$pass','$token','$nameImg','$gender','$birth','$identify','$phone','$CA','$PA','$graduate','$salary','$bank','$hobby','$family','$language','$leaveday','$role',$team,'$status')";
+//                        end xu ly upload
+                            $name=$_POST['name'];
+                            $email=$_POST['email'];
+                            $emailP=$_POST['emailP'];
+                            $pass=$_POST['password'];
+                            $token=$_POST['remember_token'];
+                            $gender=$_POST['gender'];
+                            $birth=$_POST['birthday'];
+                            $identify=$_POST['indentify'];
+                            $phone=$_POST['phone'];
+                            $CA=$_POST['Caddress'];
+                            $PA=$_POST['Paddress'];
+                            $graduate=$_POST['graduate'];
+                            $salary=$_POST['salary'];
+                            $bank=$_POST['banknumber'];
+                            $hobby=$_POST['hobby'];
+                            $family=$_POST['family'];
+                            $language=$_POST['language'];
+                            $leaveday=$_POST['leaveday'];
+                            $role=$_POST['role'];
+                            $team=$_POST['team'];
+                            $status=$_POST['status'];
+//                        truy van add user
+                        $sql = "INSERT INTO `user`( `name`, `email`, `email_personal`, `password`, `remember_token`, `image`, `gender`, `date_of_birth`, `identify_id`, `phone_number`, `current_address`, `permanent_addres`, `graduate_from`, `salary`,`bank_account_number`, `hobby`, `family_description`, `language_skills`, `leave_days`, `role_id`, `team_id`, `status`) VALUES ('$name','$email','$emailP','$pass','$token','$idIMG','$gender','$birth','$identify','$phone','$CA','$PA','$graduate','$salary','$bank','$hobby','$family','$language','$leaveday','$role',$team,'$status')";
                         mysqli_query($conn,$sql);
-
+//                        redirect responsive web
                         $url = 'http://localhost/hrm/production/users.php';
                         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
+//                        end redirect responsive web
                     }
 
                     ?>
+<!--                    / end php xử lý add-->
+
                 </div>
             </div>
 
@@ -504,4 +495,3 @@ include ("connect.php");
 
 </body>
 </html>
-
