@@ -225,21 +225,21 @@ include ("connect.php");
                         ?>
                         <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post"  enctype="multipart/form-data">
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Name
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Tên
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" name="name" id="first-name" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $row['name'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">email
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Email
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="email" id="last-name" name="email" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $row['email'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">email_personal </label>
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Email_personal </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="middle-name" class="form-control col-md-7 col-xs-12" type="email" name="emailP" value="<?php echo $row['email_personal'] ?>">
                                 </div>
@@ -268,14 +268,14 @@ include ("connect.php");
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">date_of_birth
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Sinh Nhật
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" name="birthday" required="required" type="date" value="<?php echo $row['date_of_birth'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">identify_id
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Số CMT
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" name="indentify" id="first-name" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $row['identify_id'] ?>">
@@ -289,61 +289,61 @@ include ("connect.php");
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Curent Address</label>
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Địa chỉ hiện tại</label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="Caddress" value="<?php echo $row['current_address'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Pernament Address </label>
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Địa chỉ thường tín </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="Paddress" value="<?php echo $row['permanent_addres'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Graduate form </label>
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Hình thức tốt nghiệp </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="graduate" value="<?php echo $row['graduate_from'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Salary </label>
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Lương </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="middle-name" class="form-control col-md-7 col-xs-12" type="number" name="salary" value="<?php echo $row['salary'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Bank Account number </label>
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Số tài khoản </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="banknumber" value="<?php echo $row['bank_account_number'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Hobby </label>
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Sở thích </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="hobby"value="<?php echo $row['hobby'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Family Description </label>
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Giới thiệu gia đình </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="family"value="<?php echo $row['family_description'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Language skill </label>
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Kỹ năng ngoại ngữ </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="language" value="<?php echo $row['language_skills'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Leave Day </label>
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Số ngày nghỉ </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="middle-name" class="form-control col-md-7 col-xs-12" type="number" name="leaveday" value="<?php echo $row['leave_days'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Role_id </label>
+                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Quyền </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="role"value="<?php echo $row['role_id'] ?>">
                                 </div>
