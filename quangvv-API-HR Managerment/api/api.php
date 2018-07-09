@@ -80,6 +80,36 @@ class api extends restful_api {
 
 		}
 	}
+	function updateTeams ()
+	{
+		if ($this->method == 'POST'){
+			$id      = $_GET['id'];
+			$connect = mysqli_connect('localhost','root','iuemhoe1','QLNS');
+			$name=$_POST['txtName'];
+			$logo=$_POST['txtlogo'];
+			$des = $_POST['txtDes'];
+			$leader=$_POST['txtLeader'];
+			$sql = "UPDATE `teams` SET `name`='$name',`description`='$des',`logo`='$logo',`leader_id`='$leader' WHERE `id`='$id'";
+			mysqli_query($connect,$sql);
+			if(mysqli_query($connect, $sql))
+			{
+				$response=array(
+					'status' => 1,
+					'status_message' =>'Product Added Successfully.'
+				);
+			}
+			else
+			{
+				$response=array(
+					'status' => 0,
+					'status_message' =>'Product Addition Failed.'
+				);
+			}
+			header('Content-Type: application/json');
+			echo json_encode($response);
+
+		}
+	}
 
 }
 
