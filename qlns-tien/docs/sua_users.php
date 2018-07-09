@@ -115,13 +115,13 @@
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
 												<label class="radio-inline">
-													<input name="gender" type="radio" value="0">Nam
+													<input name="gender" type="radio" value="0" <?php if($row['gender']==0) echo "checked"; ?>>Nam
 												</label>
 												<label class="radio-inline">
-													<input name="gender" type="radio" value="1">Nữ
+													<input name="gender" type="radio" value="1" <?php if($row['gender']==1) echo "checked"; ?>>Nữ
 												</label>
 												<label class="radio-inline">
-													<input name="gender" type="radio" value="2">Không xác định
+													<input name="gender" type="radio" value="2" <?php if($row['gender']==2) echo "checked"; ?>>Không xác định
 												</label>
 											</div>
 										</div>

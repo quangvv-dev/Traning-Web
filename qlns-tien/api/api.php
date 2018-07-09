@@ -34,8 +34,8 @@ class api extends restful_api {
 					$emailP=$_POST['email_personal'];
 					$pass=$_POST['password'];
 					$token=$_POST['remember_token'];
-					if($_POST['gender']){$gender=$_POST['gender'];}else{$gender=$_POST['gt'];}
-					
+
+					$gender=$_POST['gender'];
 					$birth=$_POST['date_of_birth'];
 					$identify=$_POST['identify_id'];
 					$phone=$_POST['phone_number'];
