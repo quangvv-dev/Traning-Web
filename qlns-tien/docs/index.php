@@ -237,22 +237,22 @@
 
                   <tbody>
                     <?php 
-                    $sql='select * from teams';
+                    $sql="SELECT teams.*, leader.name from teams join leader on teams.leader_id=leader.id";
                     $result = mysqli_query($con,$sql);
                     while ($row = mysqli_fetch_array($result)) {
                      ?>
-
                      <tr>
                       <td><?php echo $row['id']; ?></td>
-                      <td><?php echo $row['name']; ?></td>
+                      <td><?php echo $row[1]; ?></td>
                       <td><?php echo $row['desscription']; ?></td>
                       <td><img src="../api/images/<?php echo $row['logo']; ?>" alt="phongban" width="100px" height="80px"></td>
 
-                      <td><?php echo $row['leader_id']; ?></td>
+                      
+                      <td><?php echo $row['name']; ?></td>
     
                       <td>
                         <a href="suaphongban.php?id=<?php echo $row['id']; ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                        <a href="http://localhost/qlns/api/api.php/xoa_phongban?id=<?php echo $row['id'] ?>"class="btn btn-danger btn-xs" onclick="return confirmAction()"><i class="fa fa-trash-o"></i> Delete </a>
+                        <a href="../api/api.php/xoa_phongban?id=<?php echo $row['id'] ?>"class="btn btn-danger btn-xs" onclick="return confirmAction()"><i class="fa fa-trash-o"></i> Delete </a>
                       </td>
                     </tr>
                   <?php } ?>
@@ -288,28 +288,27 @@
 
               <table id="datatable" class="table table-striped table-bordered">
                 <thead>
-                  <tr>
+                  <tr class="text-center">
                     <th>id</th>
-                    <th>Họ Tên</th>
-                    <th>Email</th>
-                    <th>Email cá nhân</th>
-                    <th>Password</th>
+                    <th class="text-center">Họ_Tên</th>
+                    <th class="text-center">Email</th>
+                    <th class="text-center">Email_cá_nhân</th>
                     <th>Ảnh</th>
                     <th>GT</th>
-                    <th>Ngày Sinh</th>
+                    <th>Ngày_Sinh</th>
                     <th>CMT</th>
                     <th>SDT</th>
-                    <th>Địa chỉ ht</th>
-                    <th>Địa chỉ tt</th>
-                    <th>Trường học</th>
+                    <th>Địa_chỉ_ht</th>
+                    <th>Địa_chỉ_tt</th>
+                    <th>Trường_học</th>
                     <th>Lương</th>
                     <th>STK</th>
-                    <th>Sở thích</th>
-                    <th>GT gia đình</th>
-                    <th>Kỹ năng</th>
-                    <th>Ngày nghỉ còn lại</th>
-                    <th>Tình trạng</th>
-                    <th>Điều khiển</th>
+                    <th>Sở_thích</th>
+                    <th>GT_gia_đình</th>
+                    <th>Kỹ_năng</th>
+                    <th>Ngày_nghỉ_còn_lại</th>
+                    <th>Tình_trạng</th>
+                    <th>Thao_tác</th>
                   </tr>
                 </thead>
 
@@ -325,9 +324,8 @@
                     <td><?php echo $row['name'] ?></td>
                     <td><?php echo $row['email'] ?></td>
                     <td><?php echo $row['email_personal'] ?></td>
-                    <td><?php echo $row['password'] ?></td>
-                    <td><img src="images/<?php echo $row['image'] ?>" alt="nhanvien"></td>
-                    <td><?php echo $row['gender'] ?></td>
+                    <td><img src="../api/images/<?php echo $row['image']; ?>" alt="nhanvien" width="100px" height="80px"></td>
+                    <td><?php if($row['gender']==0) echo 'NAM'; if($row['gender']==1)echo 'NU'; if($row['gender']==2)echo "Khong xac dinh"; ?></td>
                     <td><?php echo $row['date_of_birth'] ?></td>
                     <td><?php echo $row['identify_id'] ?></td>
                     <td><?php echo $row['phone_number'] ?></td>
@@ -343,7 +341,7 @@
                     <td><?php echo $row['status'] ?></td>
                     <td>
                       <a href="sua_users.php?id=<?php echo $row['id'] ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                      <a href="http://localhost/restful/api.php/xoa_users?id=<?php echo $row['id'] ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                      <a href="../api.php/xoa_users?id=<?php echo $row['id'] ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                     </td>
                   </tr>
                 <?php } ?>

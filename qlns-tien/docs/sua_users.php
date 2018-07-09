@@ -1,5 +1,4 @@
 <?php include 'dbconnect.php';?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,12 +31,11 @@
 			<div class="right_col" role="main">
 				<div class="">
 					<div class="clearfix"></div>
-
 					<div class="row">
 						<div class="col-md-12 col-sm-12 col-xs-12">
 							<div class="x_panel">
 								<div class="x_title">
-									<h2>Thêm nhân viên <small>sub title</small></h2>
+									<h2>Sửa nhân viên <small>sub title</small></h2>
 									<ul class="nav navbar-right panel_toolbox">
 										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 										</li>
@@ -57,49 +55,59 @@
 								</div>
 								<div class="x_content">
 
-									<form class="form-horizontal form-label-left" novalidate action="http://localhost/qlns/api/api.php/them_users" method="POST">
-
+									<form class="form-horizontal form-label-left" novalidate action="../api/api.php/sua_users?id=<?php echo $_GET['id'] ?>" method="POST" enctype="multipart/form-data">
+									<?php 
+										$id=$_GET['id'];
+										$sql="select * from users where id='$id'";
+										$result = mysqli_query($con,$sql);
+										while ($row = mysqli_fetch_array($result)) { 
+											?>
+										
+										<!-- div get image_name in db -->
+										<div class="hidden"><input type="text" value="<?php echo $row['image'];?>" name="anh"></div>
+										<div class="hidden"><input type="text" value="<?php echo $row['gender'];?>" name="gt"></div>
 
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Họ tên <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="name" type="text" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="name" type="text" required="required" value="<?php echo $row['name'];?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Email <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="email" type="email" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="email" type="email" required="required" value="<?php echo $row['email'];?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Email cá nhân <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="email_personal" type="email" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="email_personal" type="email" required="required"  value="<?php echo $row['email_personal'];?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Pasword <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="password" type="password" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="password" type="password" required="required" value="<?php echo $row['password'];?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">remember_token <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="remember_token" type="password" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="remember_token" type="password" required="required" value="<?php echo $row['remember_token'];?>">
 											</div>
 										</div>
+										
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Ảnh <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="image" type="file" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="image" type="file" >
 											</div>
 										</div>
 										<div class="item form-group">
@@ -107,13 +115,13 @@
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
 												<label class="radio-inline">
-													<input  class=" " name="gender" type="radio" value="0" checked="true">Nam
+													<input name="gender" type="radio" value="0">Nam
 												</label>
 												<label class="radio-inline">
-													<input  class=" " name="gender" type="radio" value="1">Nữ
+													<input name="gender" type="radio" value="1">Nữ
 												</label>
 												<label class="radio-inline">
-													<input  class=" " name="gender" type="radio" value="2">Không xác định
+													<input name="gender" type="radio" value="2">Không xác định
 												</label>
 											</div>
 										</div>
@@ -121,108 +129,108 @@
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Ngày sinh <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="date_of_birth" type="date" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="date_of_birth" type="date" required="required" value="<?php echo $row['date_of_birth'] ?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">CMT <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="identify_id" type="number" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="identify_id" type="number" required="required" value="<?php echo $row['identify_id'] ?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">SDT <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="phone_number" type="number" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="phone_number" type="number" required="required" value="<?php echo $row['phone_number'] ?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Địa chỉ hiện tại <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="current_address" type="text" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="current_address" type="text" required="required" value="<?php echo $row['current_address'] ?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Địa chỉ thường trú <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="permanent_address" type="text" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="permanent_address" type="text" required="required" value="<?php echo $row['permanent_address'] ?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Trường học <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="graduate_from" type="text" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="graduate_from" type="text" required="required" value="<?php echo $row['graduate_from'] ?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Lương <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="salary" type="number" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="salary" type="number" required="required" value="<?php echo $row['salary'] ?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">STK <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="bank_account_number" type="text" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="bank_account_number" type="text" required="required" value="<?php echo $row['bank_account_number'] ?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Sở thích 
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="hobby" type="text" >
+												<input  class="form-control col-md-7 col-xs-12" name="hobby" type="text"  value="<?php echo $row['hobby'] ?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12" >GT gia đình 
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="family_description" type="text" >
+												<input  class="form-control col-md-7 col-xs-12" name="family_description" type="text"  value="<?php echo $row['family_description'] ?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12" >Kỹ năng 
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="language_skills" type="text" >
+												<input  class="form-control col-md-7 col-xs-12" name="language_skills" type="text"  value="<?php echo $row['language_skills'] ?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12" >Ngày nghỉ còn lại <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="leave_days" type="text" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="leave_days" type="text" required="required" value="<?php echo $row['leave_days'] ?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12" >role_id <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="role_id" type="text" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="role_id" type="text" required="required" value="<?php echo $row['role_id'] ?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12" >team_id <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="team_id" type="text" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="team_id" type="text" required="required" value="<?php echo $row['team_id'] ?>">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12" >Tình trạng <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="status" type="text" required="required">
+												<input  class="form-control col-md-7 col-xs-12" name="status" type="text" required="required" value="<?php echo $row['status'] ?>">
 											</div>
 										</div>
-
+										<?php } ?>
 										<div class="ln_solid"></div>
 										<div class="form-group">
 											<div class="col-md-6 col-md-offset-3">

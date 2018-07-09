@@ -8,7 +8,7 @@ if(isset($_POST['login'])){
   if($result->num_rows == 1) 
   {
     $_SESSION['username'] = $user;
-     header("location: index.php");
+    header("location: index.php");
   }else {
    $error = "Your Login Name or Password is invalid";
  }

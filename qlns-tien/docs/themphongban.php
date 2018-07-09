@@ -57,7 +57,7 @@
 								</div>
 								<div class="x_content">
 
-									<form class="form-horizontal form-label-left" novalidate action="http://localhost/qlns/api/api.php/them_phongban" method="POST" enctype="multipart/form-data">
+									<form class="form-horizontal form-label-left" novalidate action="../api/api.php/them_phongban" method="POST" enctype="multipart/form-data">
 
 
 										<div class="item form-group">

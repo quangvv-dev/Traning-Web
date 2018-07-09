@@ -1,5 +1,3 @@
-<?php include 'dbconnect.php';?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,11 +30,12 @@
 			<div class="right_col" role="main">
 				<div class="">
 					<div class="clearfix"></div>
+
 					<div class="row">
 						<div class="col-md-12 col-sm-12 col-xs-12">
 							<div class="x_panel">
 								<div class="x_title">
-									<h2>Sửa nhân viên <small>sub title</small></h2>
+									<h2>Thêm nhân viên <small>sub title</small></h2>
 									<ul class="nav navbar-right panel_toolbox">
 										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 										</li>
@@ -56,54 +55,49 @@
 								</div>
 								<div class="x_content">
 
-									<form class="form-horizontal form-label-left" novalidate action="http://localhost/qlns/api/api.php/them_users" method="POST">
-									<?php 
-										$id=$_GET['id'];
-										$sql="select * from users where id='$id'";
-										$result = mysqli_query($con,$sql);
-										while ($row = mysqli_fetch_array($result)) {
-											?>
+									<form class="form-horizontal form-label-left" novalidate action="../api/api.php/them_users" method="POST" enctype="multipart/form-data">
+
 
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Họ tên <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="name" type="text" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="name" type="text" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Email <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="email" type="email" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="email" type="email" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Email cá nhân <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="email_personal" type="email" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="email_personal" type="email" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Pasword <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="password" type="password" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="password" type="password" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">remember_token <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="remember_token" type="password" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="remember_token" type="password" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Ảnh <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="image" type="file" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="image" type="file" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
@@ -111,13 +105,13 @@
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
 												<label class="radio-inline">
-													<input name="gender" type="radio" value="0" checked="true" >Nam
+													<input  class=" " name="gender" type="radio" value="0" checked="true">Nam
 												</label>
 												<label class="radio-inline">
-													<input name="gender" type="radio" value="1">Nữ
+													<input  class=" " name="gender" type="radio" value="1">Nữ
 												</label>
 												<label class="radio-inline">
-													<input name="gender" type="radio" value="2">Không xác định
+													<input  class=" " name="gender" type="radio" value="2">Không xác định
 												</label>
 											</div>
 										</div>
@@ -125,108 +119,108 @@
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Ngày sinh <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="date_of_birth" type="date" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="date_of_birth" type="date" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">CMT <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="identify_id" type="number" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="identify_id" type="number" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">SDT <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="phone_number" type="number" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="phone_number" type="number" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Địa chỉ hiện tại <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="current_address" type="text" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="current_address" type="text" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Địa chỉ thường trú <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="permanent_address" type="text" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="permanent_address" type="text" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Trường học <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="graduate_from" type="text" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="graduate_from" type="text" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Lương <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="salary" type="number" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="salary" type="number" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">STK <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="bank_account_number" type="text" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="bank_account_number" type="text" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12">Sở thích 
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="hobby" type="text"  values="">
+												<input  class="form-control col-md-7 col-xs-12" name="hobby" type="text" >
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12" >GT gia đình 
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="family_description" type="text"  values="">
+												<input  class="form-control col-md-7 col-xs-12" name="family_description" type="text" >
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12" >Kỹ năng 
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="language_skills" type="text"  values="">
+												<input  class="form-control col-md-7 col-xs-12" name="language_skills" type="text" >
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12" >Ngày nghỉ còn lại <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="leave_days" type="text" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="leave_days" type="text" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12" >role_id <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="role_id" type="text" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="role_id" type="text" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12" >team_id <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="team_id" type="text" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="team_id" type="text" required="required">
 											</div>
 										</div>
 										<div class="item form-group">
 											<label class="control-label col-md-3 col-sm-3 col-xs-12" >Tình trạng <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 col-xs-12">
-												<input  class="form-control col-md-7 col-xs-12" name="status" type="text" required="required" values="">
+												<input  class="form-control col-md-7 col-xs-12" name="status" type="text" required="required">
 											</div>
 										</div>
-										<?php } ?>
+
 										<div class="ln_solid"></div>
 										<div class="form-group">
 											<div class="col-md-6 col-md-offset-3">

@@ -58,7 +58,7 @@
 								<div class="x_content">
 
 
-									<form class="form-horizontal form-label-left" novalidate action="http://localhost/qlns/api/api.php/sua_phongban?id=<?php echo $_GET['id'] ?>" method="POST" enctype="multipart/form-data">
+									<form class="form-horizontal form-label-left" novalidate action="../api/api.php/sua_phongban?id=<?php echo $_GET['id'] ?>" method="POST" enctype="multipart/form-data">
 										<?php 
 										$id=$_GET['id'];
 										$sql="select * from teams where id='$id'";
