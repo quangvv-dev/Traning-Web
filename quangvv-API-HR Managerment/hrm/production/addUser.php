@@ -227,21 +227,21 @@ include ("connect.php");
                     <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post"  enctype="multipart/form-data" action="">
 
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Name 
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Tên 
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input type="text" name="name" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">email
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Email
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input type="email" id="last-name" name="email" required="required" class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">email_personal </label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Email_personal </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="middle-name" class="form-control col-md-7 col-xs-12" type="email" name="emailP">
                             </div>
@@ -255,7 +255,7 @@ include ("connect.php");
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">image <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Ảnh <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input type="file" name="file" id="fileToUpload" required="required" >
@@ -263,91 +263,91 @@ include ("connect.php");
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">gender </label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Giới tính </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="radio" name="gender" value="1"> Nam<br>
+                                <input type="radio" name="gender" value="1" checked> Nam<br>
                                 <input type="radio" name="gender" value="2"> Nữ<br>
                                 <input type="radio" name="gender" value="3"> K xác định
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">date_of_birth 
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Sinh nhật
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" name="birthday" required="required" type="date">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">identify_id >
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Số CMT
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input type="text" name="indentify" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">phone_number 
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Phone
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input type="number" id="last-name" name="phone" required="required" class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Curent Address</label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Địa chỉ hiện tại</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="Caddress">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">pernament Address </label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Địa chỉ thường trú</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="Paddress">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">graduate form </label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Hình thức tốt nghiệp </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="graduate">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Salary </label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Lương </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="middle-name" class="form-control col-md-7 col-xs-12" type="number" name="salary">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Bank Account number </label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Số tài khoản</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="banknumber">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Hobby </label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Sở thích </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="hobby">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">family Description </label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Giới thiệu</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="family">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">language skill </label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Kỹ năng ngôn ngữ</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="language">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Leave Day </label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">số ngày nghỉ</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="middle-name" class="form-control col-md-7 col-xs-12" type="number" name="leaveday">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">role_id </label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Quyền</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="role">
                             </div>
@@ -364,7 +364,7 @@ include ("connect.php");
                                     while($row    =   mysqli_fetch_array($query))
                                     {
                                         ?>
-                                        <option   value="<?php echo $row['id'] ?>"><?php echo $row['id'] ?></option>
+                                        <option   value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>
 
                                     <?php } ?></select>
                             </div>

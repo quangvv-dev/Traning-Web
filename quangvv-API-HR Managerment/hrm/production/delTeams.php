@@ -7,7 +7,7 @@ if(isset($_GET['id']))
     $sql =  "DELETE FROM `teams` WHERE id=$id";
     mysqli_query($conn,$sql);
     unlink("$link");
-    $url = 'http://localhost/hrm/production';
+    $url = 'index.php';
     echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
 }
 ?>

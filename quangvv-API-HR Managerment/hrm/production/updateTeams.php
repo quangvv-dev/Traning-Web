@@ -290,7 +290,7 @@ include ("connect.php");
                                 $sql = " UPDATE `teams` SET  `name`='$name',`description`='$des',`logo`='$imgold',`leader_id`=$leader WHERE `id`=$id";
                                 mysqli_query($conn,$sql);
                                 // PHP permanent URL redirection test
-                                $url = 'http://localhost/hrm/production';
+                                $url = 'index.php';
                                 echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
                     }
                     //                        end upload

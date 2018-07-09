@@ -218,47 +218,59 @@
                         <table id="datatable" class="table table-striped table-bordered">
                             <thead>
                             <tr>
-                                <th>id</th>
-                                <th>name</th>
-                                <th>email</th>
-                                <th>email_personal	</th>
-                                <th>password</th>
-                                <th>remember_token</th>
-                                <th>image</th>
-                                <th>gender</th>
-                                <th>date_of_birth</th>
-                                <th>identify_id</th>
-                                <th>phone_number</th>
-                                <th>current_address</th>
-                                <th>permanent_addres</th>
-                                <th>graduate_from</th>
-                                <th>salary</th>
-                                <th>bank_account_number</th>
-                                <th>hobby</th>
-                                <th>family_description</th>
-                                <th>language_skills</th>
-                                <th>leave_days</th>
-                                <th>role_id</th>
-                                <th>team_id</th>
-                                <th>status</th>
-                                <th>Thao tac</th>
+                                <th>ID</th>
+                                <th>Tên</th>
+                                <th>Email</th>
+                                <th>Email_personal	</th>
+<!--                                <th>password</th>-->
+<!--                                <th>remember_token</th>-->
+                                <th> Ảnh </th>
+                                <th>Giới_tính </th>
+                                <th>Sinh_nhật </th>
+                                <th>Số_CMT </th>
+                                <th>Phone</th>
+                                <th>Địa_chỉ_hiện_tại                                 </th>
+                                <th>Địa_chỉ_thường_trú</th>
+                                <th>Trường_học </th>
+                                <th>Lương </th>
+                                <th>số_tài_khoản </th>
+                                <th>Sở_thích </th>
+                                <th>giới_thiệu_gia_đình </th>
+                                <th>Kỹ_năng_ngôn_ngữ </th>
+                                <th>Số_ngày_nghỉ </th>
+                                <th>Quyền </th>
+                                <th>Đội </th>
+                                <th>Tình_trạng </th>
+                                <th>Thao_tác </th>
                             </tr>
                             </thead>
                             <?php
-                            $sql='select * from user';
+                            $sql='SELECT user.*,teams.name FROM `user` JOIN `teams` ON user.team_id=teams.id';
                             $result = mysqli_query($conn,$sql);
                             while ($row = mysqli_fetch_array($result)) {
                             ?>
+
                             <tbody>
                             <tr>
                                 <td><?php echo $row['id'] ?></td>
                                 <td><?php echo $row['name'] ?></td>
                                 <td><?php echo $row['email'] ?></td>
                                 <td><?php echo $row['email_personal'] ?></td>
-                                <td><?php echo $row['password'] ?></td>
-                                <td><?php echo $row['remember_token'] ?></td>
+<!--                                <td>--><?php //echo $row['password'] ?><!--</td>-->
+<!--                                <td>--><?php //echo $row['remember_token'] ?><!--</td>-->
                                 <td><img src="images/<?php  echo $row["image"]?>" width="100px" height="60px"></td>
-                                <td><?php echo $row['gender'] ?></td>
+                                <td><?php if($row['gender']==1){
+                                        echo "Nam";
+                                    }
+                                    elseif($row['gender']==2)
+                                    {
+                                        echo "Nu";
+                                    }
+                                    else{
+                                        echo "Khong xac dinh";
+                                    }
+                                    ?>
+                                </td>
                                 <td><?php echo $row['date_of_birth'] ?></td>
                                 <td><?php echo $row['identify_id'] ?></td>
                                 <td><?php echo $row['phone_number'] ?></td>
@@ -272,7 +284,7 @@
                                 <td><?php echo $row['language_skills'] ?></td>
                                 <td><?php echo $row['leave_days'] ?></td>
                                 <td><?php echo $row['role_id'] ?></td>
-                                <td><?php echo $row['team_id'] ?></td>
+                                <td><?php echo $row[23] ?></td>
                                 <td><?php echo $row['status'] ?></td>
                                 <td>
                                     <a href="updateUser.php?id=<?php  echo $row["id"]?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit</a>
