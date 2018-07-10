@@ -61,17 +61,17 @@
             <div class="menu_section">
               <h3>General</h3>
               <ul class="nav side-menu">
-                <li><a href="#"><i class="fa fa-home"></i> Home </a></li>
+                <li><a href="index.php"><i class="fa fa-home"></i> Home </a></li>
                 <li><a><i class="fa fa-edit"></i> Teams <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="#">Danh sách phòng ban</a></li>
-                    <li><a href="themphongban.php">Thêm phòng ban</a></li>
+                    <li><a href="themphongban">Thêm phòng ban</a></li>
                   </ul>
                 </li>
                 <li><a><i class="fa fa-edit"></i> Users <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="#users">Danh sách nhân viên</a></li>
-                    <li><a href="them_user.php">Thêm nhân viên</a></li>
+                    <li><a href="them_user">Thêm nhân viên</a></li>
                   </ul>
                 </li>
                   
@@ -231,7 +231,7 @@
                       <th>Mô tả</th>
                       <th width="10%">Logo</th>
                       <th width="20%">leader</th>
-                      <th width="1%">Thao tác </th>
+                      <th width="15%">Thao tác </th>
                     </tr>
                   </thead>
 
@@ -244,14 +244,14 @@
                      <tr>
                       <td><?php echo $row['id']; ?></td>
                       <td><?php echo $row[1]; ?></td>
-                      <td><?php echo $row['desscription']; ?></td>
+                      <td><?php echo $row['description']; ?></td>
                       <td><img src="../api/images/<?php echo $row['logo']; ?>" alt="phongban" width="100px" height="80px"></td>
 
                       
                       <td><?php echo $row['name']; ?></td>
     
                       <td>
-                        <a href="suaphongban.php?id=<?php echo $row['id']; ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                        <a href="<?php echo $row['id']; ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
                         <a href="../api/api.php/xoa_phongban?id=<?php echo $row['id'] ?>"class="btn btn-danger btn-xs" onclick="return confirmAction()"><i class="fa fa-trash-o"></i> Delete </a>
                       </td>
                     </tr>
@@ -340,7 +340,7 @@
                     <td><?php echo $row['leave_days'] ?></td>
                     <td><?php echo $row['status'] ?></td>
                     <td>
-                      <a href="sua_users.php?id=<?php echo $row['id'] ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                      <a href="user=<?php echo $row['id'] ?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
                       <a href="../api.php/xoa_users?id=<?php echo $row['id'] ?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                     </td>
                   </tr>
