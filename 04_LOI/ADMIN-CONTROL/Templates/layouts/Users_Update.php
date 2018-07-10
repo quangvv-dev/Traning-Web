@@ -162,7 +162,7 @@
         </label>
         <div class="col-md-6 col-sm-6 col-xs-12">
             <select class="form-control col-md-7 col-xs-12"  name="team_id" id="">
-                <option value="">---Selected----</option>
+                <option value="0">---Selected----</option>
                 <?php foreach ($team as $t){?>
                     <option value="<?php echo $t['team_id']?>"><?php echo $t['team_name']?></option>
                 <?php } ?>
