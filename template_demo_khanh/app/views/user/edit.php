@@ -16,10 +16,7 @@ ob_start();
                           </span>
                 </div>
             </div>
-        </div> $error_path = "<span style='color:red;'>Error: URL bắt buộc phải nhập.</span>";
-    } else {
-        $path = $_POST["path"];
-        if (!preg_match("/\b(?:
+        </div> 
     </div>
     <div class="clearfix"></div>
 
