@@ -1,36 +1,8 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/favicon.ico" type="image/ico" />
-
-    <title>Gentelella Alela! | </title>
-
-    <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- Datatables -->
-    <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+<?php require_once"header.php";?>
 </head>
-
 <body class="nav-md">
 <?php
 include ("connect.php");
@@ -205,7 +177,7 @@ include ("connect.php");
             <!--Form add data teams-->
             <div class="x_panel">
             <div class="x_title">
-                <h2>Form Design <small>different form elements</small></h2>
+                <h2>Add New Team</h2>
                 <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -238,7 +210,7 @@ include ("connect.php");
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Description <span class="required"></span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="last-name" name="txtDes" required="required" class="form-control col-md-7 col-xs-12">
+                            <textarea name="txtDes" style="width: 100%;resize: none"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -263,61 +235,31 @@ include ("connect.php");
                         </div>
                     </div>
                     
-<!--                    php xử lý submit-->
-                    
-                    <?php
-                    if(isset($_POST['submit'])) {
-//                      Xử lý  upload anh
-                        if($_FILES["file"]["name"]!=NULL)
-                        {
+            <!--   php xử lý submit-->
 
-                            if($_FILES["file"]["type"]=="image/jpeg"
-                                ||$_FILES["file"]["type"]=="image/png"
-                                ||$_FILES["file"]["type"]=="image/gif"
-                            )
-                            {
-                                if($_FILES["file"]["size"]>1048576)
-                                {
-                                    echo "file quá nang";
-                                }
-                                else{
+            <?php
+            if(isset($_POST['submit'])) {
+            //Xử lý  upload anh
+               $idIMG  =   "Team-".$nameImg;
+               $path = "./images/".$idIMG;
+               require_once"upload.php";
+          
+            // Upload file
+               
+                $name = $_POST['txtName'];
+                $des = $_POST['txtDes'];
+                $leader = $_POST['txtLeader'];
+                $sql = "INSERT INTO `teams`( `name`, `description`, `logo`, `leader_id`) VALUES ( '$name','$des','$idIMG','$leader')";
+                mysqli_query($conn, $sql);
+                var_dump($nameImg);
 
+            // End Upload file
 
-                                    $tmp_name = $_FILES['file']['tmp_name'];
-                                    $nameImg = $_FILES['file']['name'];
-                                    $type = $_FILES['file']['type'];
-                                    $size = $_FILES['file']['size'];
-                                    $idIMG  =   "Team-".$nameImg;
-                                    $path = "./images/".$idIMG;
-// Upload file
-                                    move_uploaded_file($tmp_name,$path);
-                                    $name = $_POST['txtName'];
-                                    $des = $_POST['txtDes'];
-                                    $leader = $_POST['txtLeader'];
-                                    $sql = "INSERT INTO `teams`( `name`, `description`, `logo`, `leader_id`) VALUES ( '$name','$des','$idIMG','$leader')";
-                                    mysqli_query($conn, $sql);
-
-
-                                }
-                            }
-                            else {
-                                echo "file duoc chon khong hop le";
-                            }
-                        }
-                        else
-                        {
-                            echo "vui long chon file";
-                        }
-// End Upload file
-
-
-                        $url = 'http://localhost/hrm/production';
-                        echo '<META HTTP-EQUIV=REFRESH CONTENT="1; ' . $url . '">';
-
-                    }
-
-                    ?>
-<!--End xử lý submit-->
+                $url = 'http://localhost/hrm/production';
+                echo '<META HTTP-EQUIV=REFRESH CONTENT="1; ' . $url . '">';
+            }
+            ?>
+                    <!--End xử lý submit-->
                     
                 </form>
                 
@@ -327,43 +269,9 @@ include ("connect.php");
             <!-- /page content -->
 
             <!-- footer content -->
-            <footer>
-                <div class="pull-right">
-                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-                </div>
-                <div class="clearfix"></div>
-            </footer>
-            <!-- /footer content -->
-
-            <!-- jQuery -->
-            <script src="../vendors/jquery/dist/jquery.min.js"></script>
-            <!-- Bootstrap -->
-            <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-            <!-- FastClick -->
-            <script src="../vendors/fastclick/lib/fastclick.js"></script>
-            <!-- NProgress -->
-            <script src="../vendors/nprogress/nprogress.js"></script>
-            <!-- iCheck -->
-            <script src="../vendors/iCheck/icheck.min.js"></script>
-            <!-- Datatables -->
-            <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-            <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-            <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-            <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-            <script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
-            <script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
-            <script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-            <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-            <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-            <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-            <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-            <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-            <script src="../vendors/jszip/dist/jszip.min.js"></script>
-            <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
-            <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
-
-            <!-- Custom Theme Scripts -->
-            <script src="../build/js/custom.js"></script>
+            <?php require_once"footer.php";?>
+            <!-- end footer content -->
+            
 
 
 </body>

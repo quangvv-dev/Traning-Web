@@ -174,7 +174,7 @@ include ("connect.php");
             <!--Form add data teams-->
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Add New User</h2>
+                    <h2>Form Design <small>different form elements</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
@@ -298,13 +298,13 @@ include ("connect.php");
                         <div class="form-group">
                             <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Sở thích </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                               <textarea name="hobby" style="width: 100%;resize: none"></textarea>
+                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="hobby">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Giới thiệu gia đình</label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Giới thiệu</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <textarea name="family" style="width: 100%;resize: none"></textarea>
+                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="family">
                             </div>
                         </div>
                         <div class="form-group">
@@ -327,7 +327,7 @@ include ("connect.php");
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Team <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">team_id <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <select name="team" >
@@ -359,19 +359,18 @@ include ("connect.php");
                         </div>
                     </form>
 
-                    <!-- /end form add data-->
+<!--                    /end form add data-->
 
-                    <!--  php xử lý submit-->
-
+<!--                    php xử lý submit-->
                     <?php
                     if(isset($_POST['submit'])){
-                    //xu ly upload
+//                        xu ly upload
 
-                        
+                        require_once"upload.php";
                         $idIMG      =   "User-".$nameImg;
                         $path       = "./images/".$idIMG;
-                       require_once"upload.php";
-                    // end xu ly upload
+                        move_uploaded_file($tmp_name,$path);
+//                        end xu ly upload
                         $name       =$_POST['name'];
                         $email      =$_POST['email'];
                         $emailP     =$_POST['emailP'];
@@ -393,19 +392,17 @@ include ("connect.php");
                         $role       =$_POST['role'];
                         $team       =$_POST['team'];
                         $status     =$_POST['status'];
-                    //truy van add user
+//                        truy van add user
                         $sql        = "INSERT INTO `user`( `name`, `email`, `email_personal`, `password`, `remember_token`, `image`, `gender`, `date_of_birth`, `identify_id`, `phone_number`, `current_address`, `permanent_addres`, `graduate_from`, `salary`,`bank_account_number`, `hobby`, `family_description`, `language_skills`, `leave_days`, `role_id`, `team_id`, `status`) VALUES ('$name','$email','$emailP','$pass','$token','$idIMG','$gender','$birth','$identify','$phone','$CA','$PA','$graduate','$salary','$bank','$hobby','$family','$language','$leaveday','$role',$team,'$status')";
                         mysqli_query($conn,$sql);
-
-                    //redirect responsive web
-                        $url = 'users.php';
+//                        redirect responsive web
+                        $url = 'http://localhost/hrm/production/users.php';
                         echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-                    //end redirect responsive web
+//                        end redirect responsive web
                     }
 
                     ?>
-                    
-                    <!-- / end php xử lý add-->
+<!--                    / end php xử lý add-->
 
                 </div>
             </div>

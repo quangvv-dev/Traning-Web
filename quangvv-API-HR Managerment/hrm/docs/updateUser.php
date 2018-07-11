@@ -167,7 +167,7 @@ include ("connect.php");
             <!--Form add data teams-->
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Update User</h2>
+                    <h2>Form Design <small>different form elements</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
