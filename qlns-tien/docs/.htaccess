@@ -1,7 +1,10 @@
 Options +FollowSymlinks
 RewriteEngine on
 
-RewriteRule ^([0-9]+)$ suaphongban.php?id=$1
-RewriteRule ^user=([0-9]+)$ sua_users.php?id=$1
-RewriteRule ^themphongban$ themphongban.php
-RewriteRule ^them_user$ them_user.php
+RewriteRule ^docs/?$ docs/index.php
+RewriteRule ^team$ list_teams.php
+RewriteRule ^user$ list_users.php
+RewriteRule ^add_team$ add_team.php
+RewriteRule ^add_user$ add_user.php
+RewriteRule ^([0-9]+)$ update_team.php?id=$1
+RewriteRule ^user=([0-9]+)$ update_user.php?id=$1

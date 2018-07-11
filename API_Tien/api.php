@@ -1,71 +1,62 @@
 <?php
-require 'restful_api.php';
+include 'restful_api.php';
 
 class api extends restful_api {
 
 	function __construct(){
 		parent::__construct();
 	}
-
-
-
-	function random_user(){
-		if ($this->method == 'GET'){
-			$con = mysqli_connect('localhost', 'root', 'minhtien','qlns');
-			$sql = 'select * from users';
-			$query = mysqli_query($con,$sql);
-			$data=array();
-			while($row = mysqli_fetch_object($query)){
-				echo  json_encode($row);
+	function demo_danh_sach_nhan_vien(){
+		$con 	= new mysqli('localhost','root','minhtien','qlns');
+		mysqli_set_charset($con, 'UTF8');
+		$sql     = "select * from  teams" ;
+		$result  = $con->query($sql);
+		$data = [];
+		if($result){
+			while($row = $result->fetch_object()){
+				array_push($data, $row);
 			}
-			$this->response(200);
+			echo json_encode($data);
 		}
-		elseif ($this->method == 'POST') {
-			$con = mysqli_connect('localhost', 'root', 'minhtien','qlns');
-			$name=$_POST['name'];
-			$mota=$_POST['mota'];
-			$logo = $_POST['logo'];
-			$leader_id = $_POST['leader_id'];
-			$sql = "INSERT INTO teams (name,desscription,logo,leader_id)VALUES('$name','$mota','$logo','$leader_id')";
-			$query=mysqli_query($con,$sql);
-			if($query)
-			{
-				$response=array(
-					'status' => 1,
-					'status_message' =>'Product Added Successfully.'
-				);
-			}
-			else
-			{
-				$response=array(
-					'status' => 0,
-					'status_message' =>'Product Addition Failed.'
-				);
+		else{
+			echo "khong co du lieu";
+		}
+	}
+	function demo_xoa_nhan_vien()
+	{
+		if($this->method == 'DELETE'){
+			$con  = mysqli_connect('localhost', 'root', 'minhtien','qlns');
+			$id   = $_GET['user_id'];
+			$sql  	= "DELETE FROM users where id='$id'";
+			$res = [];
+			if( $con->query($sql)){
+				$res["MESSAGE"]="delete sucsses ";
+				$res["STATUS"]=200;
+			}else{
+				$res["MESSAGE"] = "delete fail";
+				$res["STATUS"]  = 404;
 			}
 			header('Content-Type: application/json');
-			echo json_encode($response);
+			echo json_encode($res);
 		}
-		elseif ($this->method == 'DELETE') {
-			$con = mysqli_connect('localhost', 'root', 'minhtien','qlns');
-			$id=$_GET['id'];
-			$sql="DELETE FROM teams where id='$id'";
-			$query=mysqli_query($con,$sql);
-			if($query)
-			{
-				$response=array(
-					'status' => 1,
-					'status_message' =>'Xoa thanh cong.'
-				);
+	}
+	function demo_them_phong_ban()
+	{
+		if($this->method == 'POST'){
+			$con 	 	 = mysqli_connect('localhost', 'root', 'minhtien','qlns');
+			mysqli_set_charset($con, 'UTF8');
+			$name 		 = $_POST['name'];
+			$description = $_POST['description'];
+			$sql  		 = "INSERT into teams (name,description) values('{$name}','{$description}')";
+			if( $con->query($sql)){
+				$res["MESSAGE"] = "insert sucsses ";
+				$res["STATUS"]	= 200;
+			}else{
+				$res["MESSAGE"]	= "insert fail";
+				$res["STATUS"]	= 404;
 			}
-			else
-			{
-				$response=array(
-					'status' => 0,
-					'status_message' =>'Da co loi xay ra.'
-				);
-			}
-			header('Content-Type: application/json');
-			echo json_encode($response);
+		header('Content-Type: application/json');
+			echo json_encode($res);
 		}
 	}
 }

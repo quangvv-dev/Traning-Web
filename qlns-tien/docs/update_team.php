@@ -78,7 +78,8 @@
 												<label class="control-label col-md-3 col-sm-3 col-xs-12" >Mô tả <span class="required">*</span>
 												</label>
 												<div class="col-md-6 col-sm-6 col-xs-12">
-													<input id="name" class="form-control col-md-7 col-xs-12" name="mota" type="text" required="required" value="<?php echo $row['description']; ?>">
+												
+													<textarea id="name" class="form-control col-md-7 col-xs-12" name="mota" rows="5" style="resize: vertical;"><?php echo $row['description']; ?></textarea>
 												</div>
 											</div>
 											<div class="item form-group">

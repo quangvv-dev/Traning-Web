@@ -28,14 +28,14 @@
                 <li><a href="index.php"><i class="fa fa-home"></i> Home </a></li>
                 <li><a><i class="fa fa-edit"></i> Teams <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="index.php#">Danh sách phòng ban</a></li>
-                    <li><a href="themphongban">Thêm phòng ban</a></li>
+                    <li><a href="team">Danh sách phòng ban</a></li>
+                    <li><a href="add_team">Thêm phòng ban</a></li>
                   </ul>
                 </li>
                 <li><a><i class="fa fa-edit"></i> Users <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="index.php#users">Danh sách nhân viên</a></li>
-                    <li><a href="them_user">Thêm nhân viên</a></li>
+                    <li><a href="user">Danh sách nhân viên</a></li>
+                    <li><a href="add_user">Thêm nhân viên</a></li>
                   </ul>
                 </li>
                   
