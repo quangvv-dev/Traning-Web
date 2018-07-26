@@ -3,7 +3,6 @@
 <head>
 <?php require_once"header.php";?>
 </head>
-
 <body class="nav-md">
 <?php
 include ("connect.php");
@@ -68,7 +67,9 @@ include ("connect.php");
                         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                     </a>
                 </div>
+                
                 <!-- /menu footer buttons -->
+                
             </div>
         </div>
 
@@ -167,54 +168,111 @@ include ("connect.php");
                 </nav>
             </div>
         </div>
+        
         <!-- /top navigation -->
 
         <!-- page content -->
         <div class="right_col" role="main" style="min-height: 1552px;">
-            <!--Table display teams-->
+            
+            <!--Form add data teams-->
+            <div class="x_panel">
+            <div class="x_title">
+                <h2>Add New Team</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Settings 1</a>
+                            </li>
+                            <li><a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
             <div class="x_content">
+                <br />
+                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="" enctype="multipart/form-data">
 
-                <div class="x_title">
-                    <h2>List Teams <small>view</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                </div>
-                <div  id="datatable-buttons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer table-responsive"><table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline" role="grid" aria-describedby="datatable-buttons_info" style="width: 1512px;">
-                        <button type="button" name="btn-add" class="btn btn-info"><a href="addTeams.php">Add New</a></button>
-                        <thead>
-                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">ID</th><th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 200px;" aria-label="Position: activate to sort column ascending">Name</th><th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 384px;" aria-label="Office: activate to sort column ascending">Description</th><th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 105px;" aria-label="Age: activate to sort column ascending">Logo</th><th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 70px;" aria-label="Start date: activate to sort column ascending">Leader_id</th><th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;" aria-label="Salary: activate to sort column ascending">Thao Tac</th></tr>
-                        </thead>
-                        <tbody>
-                        <?php
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Name <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" name="txtName" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Description <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="last-name" name="txtDes" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Logo </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="file" name="file" id="fileToUpload" required="required" >
+                        </div>
+                    </div>
 
-                        $team   =   "SELECT * FROM `teams`";
-                        $query  =   mysqli_query($conn,$team);
-                        while($row    =   mysqli_fetch_array($query))
-                        {
-                            ?>
-                            <tr role="row" class="odd">
-                                <td tabindex="0" class="sorting_1"><?php  echo $row["id"]      ?></td>
-                                <td><?php  echo $row["name"]      ?></td>
-                                <td><?php  echo $row["description"]?></td>
-                                <td> <img src="images/<?php  echo $row["logo"]?>" width="144px" height="80px"> </td>
-                                <td><?php  echo $row["leader_id"]?></td>
-                                <td> <a href="updateTeams.php?id=<?php  echo $row["id"]?>" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>  <a href="delTeams.php?id=<?php  echo $row["id"]?>" class="btn btn-danger btn-xs" onclick="return confirm('Bạn có thực sự muốn xóa?')"><i class="fa fa-trash-o"></i> Delete </a> </td>
-                            </tr>
-                        <?php } ?></tbody>
-                    </table>
-                </div></div>
-            <!-- End Table display teams-->
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">ID leader <span class="required"></span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" name="txtLeader" required="required" type="text">
+                        </div>
+                    </div>
+                    <div class="ln_solid"></div>
+                    <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
 
-           <!-- footer content -->
-           <?php require_once"footer.php";?>
-           <!-- end footer content -->
+                            <button type="submit" name="submit" class="btn btn-success" >Submit</button>
+                        </div>
+                    </div>
+                    
+            <!--   php xử lý submit-->
+
+            <?php
+            if(isset($_POST['submit'])) {
+            //Xử lý  upload anh
+
+                require_once"upload.php";
+               $idIMG  =   "Team-".$nameImg;
+               $path = "./images/".$idIMG;
+            // Upload file
+                move_uploaded_file($tmp_name,$path);
+                $name = $_POST['txtName'];
+                $des = $_POST['txtDes'];
+                $leader = $_POST['txtLeader'];
+                $sql = "INSERT INTO `teams`( `name`, `description`, `logo`, `leader_id`) VALUES ( '$name','$des','$idIMG','$leader')";
+                mysqli_query($conn, $sql);
+                var_dump($nameImg);
+
+            // End Upload file
+
+                $url = 'http://localhost/hrm/production';
+                echo '<META HTTP-EQUIV=REFRESH CONTENT="1; ' . $url . '">';
+            }
+            ?>
+                    <!--End xử lý submit-->
+                    
+                </form>
+                
+            </div>
+        </div>
+
+            <!-- /page content -->
+
+            <!-- footer content -->
+            <?php require_once"footer.php";?>
+            <!-- end footer content -->
+            
+
+
 </body>
 </html>
