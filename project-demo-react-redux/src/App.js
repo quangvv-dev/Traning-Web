@@ -36,23 +36,23 @@ class App extends Component {
             <div className="modal-body">
               <div className="form-group">
                 <label>ID :</label>
-                <input type="number" name="id" className="form-control" placeholder="Id" value={this.state.id || ""} onChange={this.onChange} />
+                <input type="number" name="id" className="form-control" placeholder="Id" value={this.state.id} onChange={this.onChange} />
               </div>
               <div className="form-group">
                 <label>Name :</label>
-                <input type="text" name="name" className="form-control" placeholder="name" value={this.state.name || ""} onChange={this.onChange} />
+                <input type="text" name="name" className="form-control" placeholder="name" value={this.state.name} onChange={this.onChange} />
               </div>
               <div className="form-group">
                 <label>Birthday :</label>
-                <input type="text" name="birthday" className="form-control" placeholder="birthday" value={this.state.birthday || ""} onChange={this.onChange} />
+                <input type="text" name="birthday" className="form-control" placeholder="birthday" value={this.state.birthday} onChange={this.onChange} />
               </div>
               <div className="form-group">
                 <label>Sex :</label>
-                <input type="text" name="sex" className="form-control" placeholder="sex" value={this.state.sex || ""} onChange={this.onChange} />
+                <input type="text" name="sex" className="form-control" placeholder="sex" value={this.state.sex} onChange={this.onChange} />
               </div>
               <div className="form-group">
                 <label>Job :</label>
-                <input type="text" name="job" className="form-control" placeholder="job" value={this.state.job || ""} onChange={this.onChange} />
+                <input type="text" name="job" className="form-control" placeholder="job" value={this.state.job} onChange={this.onChange} />
               </div>
             </div>
             <div className="modal-footer">
@@ -109,14 +109,6 @@ class App extends Component {
 
   onSave = (e) => {
     e.preventDefault();
-    // const member = {
-    //   id        : this.props.user.id,
-    //   name      : this.refs.name.value,
-    //   birthday  : this.refs.birthday.value,
-    //   sex       : this.refs.sex.value,
-    //   job       : this.refs.job.value
-    // }
-console.log(this.state);
     this.props.onSave(this.state);
   }
 }
