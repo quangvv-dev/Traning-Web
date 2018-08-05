@@ -1,0 +1,10 @@
+Options +FollowSymlinks
+RewriteEngine On
+ AllowOverride All
+ AllowOverride AuthConfig Indexes
+
+# neither a file nor a directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([0-9]+)$ updateTeams.php?id=$1
+#RewriteRule ^(.*).abc$ $1.php [L]	
